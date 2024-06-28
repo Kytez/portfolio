@@ -1,0 +1,17 @@
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 92px;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.burgerIcon {
+    width: 40px;
+    height: 32px;
+}

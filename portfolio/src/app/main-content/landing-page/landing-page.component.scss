@@ -1,0 +1,62 @@
+section {
+    height: 100vh;
+    padding: 0 80px 16px 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    font-family: 'Syne';
+    font-size: 128px;
+    font-weight: 800;
+    text-align: center;
+}
+
+.placeholderAndName {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 930px;
+}
+
+.placeholder {
+    background-color: black;
+    height: 3px;
+    flex: 1;
+}
+
+.name {
+    font-family: 'Overpass';
+    font-size: 48px;
+    font-weight: 700;
+    margin-left: 16px;
+}
+
+.mailAndScroll {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Overpass';
+    font-size: 23px;
+
+    a {
+        transform: rotate(-90deg);
+        height: 300px;
+    }
+}
+
+.arrowAndText {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    span {
+        text-align: center;
+    }
+}

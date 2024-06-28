@@ -1,1 +1,38 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #FFFCF3;
+}
+
+@font-face {
+    font-family: 'Syne';
+    font-display: swap;
+    src: url(./assets/fonts/syne/Syne-VariableFont_wght.ttf) format('woff2');
+  }
+
+  @font-face {
+    font-family: 'Overpass';
+    font-display: swap;
+    src: url(./assets/fonts/overpass/Overpass-VariableFont_wght.ttf) format('woff2');
+  }
+
+  .fontSyne {
+    font-family: 'Syne';
+  }
+
+  .fontOverpass {
+    font-family: 'Overpass';
+  }
+
+  .colorGreen {
+    color: #00BC8F;
+  }
+
+  a {
+    text-decoration: none;
+    color: black;
+  }
