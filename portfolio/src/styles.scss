@@ -1,38 +1,71 @@
 * {
-    margin: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
-    background-color: #FFFCF3;
+  background-color: #fffcf3;
 }
 
 @font-face {
-    font-family: 'Syne';
-    font-display: swap;
-    src: url(./assets/fonts/syne/Syne-VariableFont_wght.ttf) format('woff2');
-  }
+  font-family: "Syne";
+  font-display: swap;
+  src: url(./assets/fonts/syne/Syne-VariableFont_wght.ttf) format("woff2");
+}
 
-  @font-face {
-    font-family: 'Overpass';
-    font-display: swap;
-    src: url(./assets/fonts/overpass/Overpass-VariableFont_wght.ttf) format('woff2');
-  }
+@font-face {
+  font-family: "Overpass";
+  font-display: swap;
+  src: url(./assets/fonts/overpass/Overpass-VariableFont_wght.ttf)
+    format("woff2");
+}
 
-  .fontSyne {
-    font-family: 'Syne';
-  }
+.fontSyne {
+  font-family: "Syne";
+}
 
-  .fontOverpass {
-    font-family: 'Overpass';
-  }
+.fontOverpass {
+  font-family: "Overpass";
+}
 
-  .colorGreen {
-    color: #00BC8F;
-  }
+.colorGreen {
+  color: #00bc8f;
+}
 
-  a {
-    text-decoration: none;
-    color: black;
+a {
+  text-decoration: none;
+  color: black;
+}
+
+h2 {
+  font-size: 78px;
+  font-weight: 800;
+  margin-bottom: 40px;
+  font-family: "Syne";
+
+  &:hover {
+    color: #00bc8f;
+    cursor: default;
   }
+}
+
+p {
+  font-family: "Overpass";
+  font-size: 23px;
+}
+
+.btn {
+  text-align: center;
+  border: solid 4px black;
+  padding: 20px 60px;
+  font-family: "Overpass";
+  font-size: 23px;
+  cursor: pointer;
+  transition: 100ms;
+
+  &:hover {
+    font-weight: 700;
+    padding: 20px 80px;
+  }
+}

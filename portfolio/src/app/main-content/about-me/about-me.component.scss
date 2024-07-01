@@ -1,0 +1,30 @@
+section {
+  padding: 200px 100px 0 100px;
+}
+
+h2 {
+  width: fit-content;
+}
+
+.textAndImg {
+  display: flex;
+  justify-content: space-between;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding-right: 88px;
+}
+
+.buttonBox {
+  margin-top: 32px;
+  display: flex;
+  justify-content: center;
+}
+
+img {
+    width: 550px;
+    height: 550px;
+  }
