@@ -1,18 +1,18 @@
 import { Component, AfterViewInit } from '@angular/core';
 
 @Component({
-  selector: 'app-about-me',
+  selector: 'app-skills',
   standalone: true,
   imports: [],
-  templateUrl: './about-me.component.html',
-  styleUrl: './about-me.component.scss'
+  templateUrl: './skills.component.html',
+  styleUrl: './skills.component.scss'
 })
-export class AboutMeComponent implements AfterViewInit {
+export class SkillsComponent implements AfterViewInit {
 
   images = [
-    '../../../../assets/img/arrow_left/arrow_left_1.png',
-    '../../../../assets/img/arrow_left/arrow_left_2.png',
-    '../../../../assets/img/arrow_left/arrow_left_3.png'
+    '../../../../assets/img/arrow_right/arrow_right_1.png',
+    '../../../../assets/img/arrow_right/arrow_right_2.png',
+    '../../../../assets/img/arrow_right/arrow_right_3.png'
   ];
 
   currentImage = this.images[0];
@@ -21,7 +21,7 @@ export class AboutMeComponent implements AfterViewInit {
   intervalId: any;
 
   ngAfterViewInit(): void {
-    const arrowImageElement = document.getElementById('arrowImage');
+    const arrowImageElement = document.getElementById('arrowImageSkills');
     if (arrowImageElement) {
       this.observer = new IntersectionObserver(this.handleIntersect.bind(this), {
         rootMargin: '0px 0px -300px 0px',

@@ -2,8 +2,14 @@ section {
     height: 100vh;
     padding: 0 100px;
     display: flex;
+    justify-content: center;
+}
+
+.content {
+    display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
+    padding-top: 120px;
 }
 
 header {

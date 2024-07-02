@@ -1,19 +1,21 @@
 <section>
-  <app-navbar></app-navbar>
+  <div class="maxW1440 content">
+    <app-navbar></app-navbar>
 
-  <header>
-    <h1>Frontend<br />Developer</h1>
-    <div class="placeholderAndName">
-      <div class="placeholder"></div>
-      <span class="name colorGreen">Marcel Luwinski</span>
-    </div>
-  </header>
+    <header>
+      <h1>Frontend<br />Developer</h1>
+      <div class="placeholderAndName">
+        <div class="placeholder"></div>
+        <span class="name colorGreen">Marcel Luwinski</span>
+      </div>
+    </header>
 
-  <div class="mailAndScroll">
-    <a href="#">marcel.luwinski&#64;gmail.com</a>
-    <div class="arrowAndText">
-        <img src="../../../assets/img/icons/arrow_down.png">
-        <span>Scroll<br>Down</span>
+    <div class="mailAndScroll">
+      <a href="#">marcel.luwinski&#64;gmail.com</a>
+      <div class="arrowAndText">
+        <img [src]="currentImage" />
+        <span>Scroll<br />Down</span>
+      </div>
     </div>
   </div>
 </section>

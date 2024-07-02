@@ -1,5 +1,7 @@
 section {
   padding: 200px 100px 0 100px;
+  display: flex;
+  justify-content: center;
 }
 
 h2 {
@@ -24,7 +26,33 @@ h2 {
   justify-content: center;
 }
 
-img {
+.imgContainer {
+  position: relative;
+
+  img {
     width: 550px;
     height: 550px;
   }
+}
+
+.hoverFrame {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 4px solid transparent;
+  transition: 100ms;
+
+  &:hover {
+    border-color: black;
+    top: 10px;
+    left: 10px;
+    right: -10px;
+    bottom: -10px;
+  }
+}
+
+#arrowImage {
+  width: calc(100% - 150px);
+}
