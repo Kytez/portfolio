@@ -43,6 +43,7 @@ h2 {
   font-weight: 800;
   margin-bottom: 40px;
   font-family: "Syne";
+  transition: 125ms;
 
   &:hover {
     color: #00bc8f;
@@ -63,10 +64,16 @@ p {
   font-size: 23px;
   cursor: pointer;
   transition: 100ms;
+  width: fit-content;
 
   &:hover {
     font-weight: 700;
     padding: 20px 80px;
+  }
+
+  &:active {
+    background-color: black;
+    color: #fffcf3;
   }
 }
 
@@ -74,3 +81,4 @@ p {
   max-width: 1440px;
   width: 100%;
 }
+

@@ -19,11 +19,11 @@ export class LandingPageComponent {
     '../../../../assets/img/scroll_arrows/scroll_arrow_5.png',
   ];
 
-  currentImage = this.images[0];
+  currentImage = this.images[3];
   imageIndex = 0;
 
   constructor() {
-    this.animateArrow();
+    // this.animateArrow();
   }
 
   animateArrow() {

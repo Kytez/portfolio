@@ -1,68 +1,85 @@
 section {
-    height: 100vh;
-    padding: 0 100px;
-    display: flex;
-    justify-content: center;
+  height: 100vh;
+  padding: 0 100px;
+  display: flex;
+  justify-content: center;
 }
 
 .content {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    padding-top: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-top: 120px;
 }
 
 header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 h1 {
-    font-family: 'Syne';
-    font-size: 128px;
-    font-weight: 800;
-    text-align: center;
+  font-family: "Syne";
+  font-size: 128px;
+  font-weight: 800;
+  text-align: center;
 }
 
 .placeholderAndName {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 930px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 930px;
 }
 
 .placeholder {
-    background-color: black;
-    height: 3px;
-    flex: 1;
+  background-color: black;
+  height: 3px;
+  flex: 1;
 }
 
 .name {
-    font-family: 'Overpass';
-    font-size: 48px;
-    font-weight: 700;
-    margin-left: 16px;
+  font-family: "Overpass";
+  font-size: 48px;
+  font-weight: 700;
+  margin-left: 16px;
 }
 
 .mailAndScroll {
-    display: flex;
-    justify-content: space-between;
-    font-family: 'Overpass';
-    font-size: 23px;
+  display: flex;
+  justify-content: space-between;
+  font-family: "Overpass";
+  font-size: 23px;
 
-    a {
-        transform: rotate(-90deg);
-        height: 300px;
-    }
+  a {
+    transform: rotate(-90deg);
+    height: 300px;
+  }
 }
 
 .arrowAndText {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 8px;
+  overflow: hidden;
 
-    span {
-        text-align: center;
-    }
+  span {
+    text-align: center;
+    background-color: #fffcf3;
+  }
+
+  img {
+    animation: moveArrow 2s ease infinite;
+    z-index: -1;
+  }
+}
+
+@keyframes moveArrow {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(100%);
+  }
 }

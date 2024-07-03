@@ -1,15 +1,14 @@
-import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-portfolio-project',
+  selector: 'app-portfolio-project-mirrored',
   standalone: true,
-  imports: [CommonModule],
-  templateUrl: './portfolio-project.component.html',
-  styleUrl: './portfolio-project.component.scss'
+  imports: [],
+  templateUrl: './portfolio-project-mirrored.component.html',
+  styleUrl: './portfolio-project-mirrored.component.scss'
 })
-export class PortfolioProjectComponent {
-  
+export class PortfolioProjectMirroredComponent {
+
   @Input() projectImg = '';
   @Input() projectName = '';
   @Input() projectTechStack = '';

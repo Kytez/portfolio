@@ -1,4 +1,4 @@
-import { Component, AfterViewInit } from '@angular/core';
+import { Component, AfterViewInit, ElementRef, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-skills',
@@ -19,15 +19,15 @@ export class SkillsComponent implements AfterViewInit {
   imageIndex = 0;
   observer: IntersectionObserver | undefined;
   intervalId: any;
+  @ViewChild('arrowImageSkills') arrowImageSkills: ElementRef;
 
   ngAfterViewInit(): void {
-    const arrowImageElement = document.getElementById('arrowImageSkills');
-    if (arrowImageElement) {
+    if (this.arrowImageSkills.nativeElement) {
       this.observer = new IntersectionObserver(this.handleIntersect.bind(this), {
-        rootMargin: '0px 0px -300px 0px',
+        rootMargin: '0px 0px -200px 0px',
         threshold: 1.0
       });
-      this.observer.observe(arrowImageElement);
+      this.observer.observe(this.arrowImageSkills.nativeElement);
     }
   }
 

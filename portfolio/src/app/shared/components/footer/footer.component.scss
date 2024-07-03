@@ -1,0 +1,19 @@
+section {
+  background-image: url("../../../../assets/img/black_shape_background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 800px;
+  padding: 200px 100px 0 100px;
+  margin-top: -50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h2 {
+  color: #fffcf3;
+
+  &:hover {
+    color: #00bc8f;
+  }
+}
