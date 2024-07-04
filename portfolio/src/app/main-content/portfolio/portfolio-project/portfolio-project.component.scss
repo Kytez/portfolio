@@ -103,6 +103,12 @@ section {
   }
 }
 
+.btns {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+}
+
 @keyframes slideInfoText {
   from {
     transform: translateX(-120%);

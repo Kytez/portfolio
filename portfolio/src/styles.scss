@@ -77,6 +77,29 @@ p {
   }
 }
 
+.btnSecondary {
+  text-align: center;
+  border: solid 4px #00bc8f;
+  color: #fffcf3;
+  background-color: #00bc8f;
+  padding: 20px 60px;
+  font-family: "Overpass";
+  font-size: 23px;
+  cursor: pointer;
+  transition: 100ms;
+  width: fit-content;
+
+  &:hover {
+    font-weight: 700;
+    padding: 20px 80px;
+  }
+
+  &:active {
+    background-color: #fffcf3;
+    color: black;
+  }
+}
+
 .maxW1440 {
   max-width: 1440px;
   width: 100%;

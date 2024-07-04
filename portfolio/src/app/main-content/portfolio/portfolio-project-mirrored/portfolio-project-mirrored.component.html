@@ -1,17 +1,25 @@
 <section>
-    <div class="imgContainer">
-      <img class="screenshot" src="{{ projectImg }}" />
-      <div class="hoverFrame" ></div>
-      <img class="circleArrow" src="../../../../assets/img/icons/circleArrow.png">
-    </div>
-  
-    <div class="textContainer">
-      <span class="projectCount fontSyne">{{ projectCount }}/0{{ projectTotal }}</span>
-      <div class="projectInfo">
-        <h3 class="fontSyne">{{ projectName }}</h3>
-        <span class="fontOverpass colorGreen">{{ projectTechStack }}</span>
-        <p>{{ projectDescription }}</p>
-        <button class="btn">Github</button>
+  <div class="imgContainer">
+    <img class="screenshot" src="{{ projectImg }}" />
+    <div class="hoverFrame"></div>
+    <img
+      class="circleArrow"
+      src="../../../../assets/img/icons/circleArrow.png"
+    />
+  </div>
+
+  <div class="textContainer">
+    <span class="projectCount fontSyne"
+      >{{ projectCount }}/0{{ projectTotal }}</span
+    >
+    <div class="projectInfo">
+      <h3 class="fontSyne">{{ projectName }}</h3>
+      <span class="fontOverpass colorGreen">{{ projectTechStack }}</span>
+      <p>{{ projectDescription }}</p>
+      <div class="btns">
+        <a href="{{ projectGithubUrl }}" class="btn">Github</a>
+        <a href="{{ projectLiveTestUrl }}" class="btnSecondary">Live Test</a>
       </div>
     </div>
-  </section>
+  </div>
+</section>

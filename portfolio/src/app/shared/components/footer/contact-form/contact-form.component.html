@@ -1,0 +1,38 @@
+<section class="fontOverpass">
+  <span class="colorGreen fontS32W700">Want to discuss a new project?</span>
+  <span class="fontS23"
+    >Say hello! Let's discuss your ideas and make it happen</span
+  >
+
+  <form (ngSubmit)="onSubmit()">
+    <input
+      class="inputField"
+      type="text"
+      id="name"
+      name="name"
+      placeholder="Your name"
+    />
+    <input
+      class="inputField"
+      type="mail"
+      id="mail"
+      name="mail"
+      placeholder="Your email"
+    />
+    <textarea
+      class="inputField"
+      id="message"
+      name="message"
+      placeholder="Your message"
+      style="height: 200px"
+    ></textarea>
+    <div>
+      <input type="checkbox" />
+      <span
+        >I've read the <a class="colorGreen" href="#">privacy policy</a> and
+        agree to the processing of my data as outlined.</span
+      >
+    </div>
+    <input class="btnForm" type="submit" value="Submit" />
+  </form>
+</section>

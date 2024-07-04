@@ -1,0 +1,115 @@
+section {
+  height: calc(100vh - 92px);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  background-color: #fffcf3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.navLinks {
+  padding: 0 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 100%;
+
+  a {
+    font-size: 96px;
+    font-weight: 700;
+    position: relative;
+    display: inline-block;
+    padding: 10px 30px;
+    transition: all 125ms ease-in-out;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 40px;
+      height: 4px;
+      background: black;
+      transition: all 125ms ease-in-out;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 4px;
+      height: 40px;
+      background: black;
+      transition: all 125ms ease-in-out;
+    }
+
+    &:hover::before {
+      width: 40%;
+      bottom: 0;
+      left: 60%;
+      transition: all 225ms ease-in-out;
+    }
+
+    &:hover::after {
+      height: 0;
+      bottom: 0;
+      left: 0;
+      transition: all 25ms ease-in-out;
+    }
+  }
+}
+
+footer {
+  background-image: url(../../../../../assets/img/black_shape_background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 140px 100px 64px 100px;
+  display: flex;
+  justify-content: center;
+}
+
+.footerContent {
+  display: flex;
+  justify-content: space-between;
+}
+
+.textContainer {
+  a {
+    color: #fffcf3;
+    font-size: 23px;
+    font-weight: 200;
+
+    &:hover {
+      color: #00bc8f;
+    }
+  }
+
+  h2 {
+    margin-block-end: 16px;
+    color: #fffcf3;
+
+    &:hover {
+      color: #00bc8f;
+    }
+  }
+}
+
+.socialLinks {
+  display: flex;
+  align-items: flex-end;
+  gap: 64px;
+
+  a {
+    transition: 125ms ease-in-out;
+
+    &:hover {
+      transform: translateY(-16px);
+    }
+  }
+}

@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
+import { NavMenuComponent } from './nav-menu/nav-menu.component';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [],
+  imports: [NavMenuComponent, CommonModule],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss',
 })
@@ -19,12 +21,13 @@ export class NavbarComponent {
   currentImage = this.images[0];
   imageIndex = 0;
   animating = false;
+  menuOpen = false;
 
-  onBurgerClick() {
+  toggleMenuAndAnimateIcon() {
     if (this.animating) return;
-
     this.animating = true;
     this.animateImages(this.imageIndex === 0);
+    this.toggleMenu();
   }
 
   animateImages(imgState: boolean) {
@@ -39,5 +42,9 @@ export class NavbarComponent {
         this.animating = false;
       }
     }, 40);
+  }
+
+  toggleMenu() {
+    this.menuOpen = !this.menuOpen;
   }
 }

@@ -13,6 +13,8 @@ export class PortfolioProjectMirroredComponent {
   @Input() projectName = '';
   @Input() projectTechStack = '';
   @Input() projectDescription = '';
+  @Input() projectGithubUrl = '';
+  @Input() projectLiveTestUrl = '';
   @Input() projectCount = '';
   @Input() projectTotal: number;
 }

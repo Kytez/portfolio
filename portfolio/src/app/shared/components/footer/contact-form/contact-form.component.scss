@@ -1,0 +1,84 @@
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  width: 700px;
+  color: #fffcf3;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  width: 100%;
+}
+
+.inputField {
+  width: 600px;
+  border: 0;
+  border-bottom: 2px solid #fffcf3;
+  background-color: black;
+  padding: 15px 25px;
+  outline: none;
+  color: #fffcf3;
+  font-family: "Overpass";
+  font-size: 16px;
+  font-weight: 300;
+
+  &:hover {
+    outline: 4px solid #fffcf3;
+    border-bottom-color: black;
+    cursor: pointer;
+  }
+
+  &:focus {
+    outline: 2px solid #fffcf3;
+    border-bottom-color: black;
+  }
+
+  &::placeholder {
+    font-family: "Overpass";
+    color: #fffcf3;
+    font-size: 16px;
+  }
+}
+
+div {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btnForm {
+  text-align: center;
+  border: solid 4px #fffcf3;
+  padding: 20px 60px;
+  font-family: "Overpass";
+  font-size: 23px;
+  cursor: pointer;
+  transition: 100ms;
+  width: fit-content;
+  color: #fffcf3;
+  background-color: black;
+
+  &:hover {
+    font-weight: 700;
+    padding: 20px 80px;
+  }
+
+  &:active {
+    background-color: #fffcf3;
+    color: black;
+  }
+}
+
+.fontS32W700 {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.fontS23 {
+  font-size: 23px;
+}
