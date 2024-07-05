@@ -4,35 +4,95 @@
     >Say hello! Let's discuss your ideas and make it happen</span
   >
 
-  <form (ngSubmit)="onSubmit()">
-    <input
-      class="inputField"
-      type="text"
-      id="name"
-      name="name"
-      placeholder="Your name"
-    />
-    <input
-      class="inputField"
-      type="mail"
-      id="mail"
-      name="mail"
-      placeholder="Your email"
-    />
-    <textarea
-      class="inputField"
-      id="message"
-      name="message"
-      placeholder="Your message"
-      style="height: 200px"
-    ></textarea>
-    <div>
-      <input type="checkbox" />
-      <span
-        >I've read the <a class="colorGreen" href="#">privacy policy</a> and
-        agree to the processing of my data as outlined.</span
+  <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+    <div class="inputContainer">
+      <input
+        #name="ngModel"
+        class="inputField"
+        type="text"
+        id="name"
+        name="name"
+        placeholder="Your name"
+        required
+        minlength="2"
+        maxlength="30"
+        [(ngModel)]="contactData.name"
+      />
+      @if (!name.valid && name.touched) {
+      <span class="invalidMessage"
+        >Please enter your name with at least 2 characters</span
       >
+      }
     </div>
-    <input class="btnForm" type="submit" value="Submit" />
+
+    <div class="inputContainer">
+      <input
+        #email="ngModel"
+        class="inputField"
+        type="email"
+        id="email"
+        name="email"
+        placeholder="Your email"
+        required
+        maxlength="30"
+        pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
+        [(ngModel)]="contactData.email"
+      />
+      @if (!email.valid && email.touched) {
+      <span class="invalidMessage">Please enter a valid Email</span>
+      }
+    </div>
+
+    <div class="inputContainer">
+      <textarea
+        #message="ngModel"
+        class="inputField"
+        id="message"
+        name="message"
+        placeholder="Your message"
+        required
+        minlength="10"
+        maxlength="800"
+        style="height: 200px"
+        [(ngModel)]="contactData.message"
+      ></textarea>
+      @if (!message.valid && message.touched) {
+      <span class="invalidMessage"
+        >Please enter your message with at least 10 characters</span
+      >
+      }
+    </div>
+
+    <div class="inputContainer">
+      <div class="checkboxAndText">
+        <div [ngClass]="{'customCheckboxChecked': contactData.privacyPolicy, 'customCheckbox': !contactData.privacyPolicy}" (click)="toggleCheckbox()"></div>
+        <input
+          #checkbox="ngModel"
+          id="privacyPolicy"
+          name="privacyPolicy"
+          class="checkbox"
+          [(ngModel)]="contactData.privacyPolicy"
+          [checked]="contactData.privacyPolicy"
+          required
+          type="checkbox"
+          hidden
+        />
+        <span
+          >I've read the <a class="colorGreen" href="#">privacy policy</a> and
+          agree to the processing of my data as outlined.</span
+        >
+      </div>
+      @if (!checkbox.valid && message.valid && name.valid && email.valid) {
+      <span class="invalidMessage">Please accept the privacy policy</span>
+      }
+    </div>
+
+    <input
+      [disabled]="contactForm.invalid"
+      class="btnForm"
+      [ngClass]="{ disabled: contactForm.invalid, enabled: contactForm.valid }"
+      type="submit"
+      value="Say hello ;)"
+    />
   </form>
 </section>

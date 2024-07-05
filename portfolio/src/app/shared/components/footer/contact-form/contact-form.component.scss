@@ -45,13 +45,65 @@ form {
   }
 }
 
-div {
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+  box-shadow: 0 0 0 30px black inset !important;
+  -webkit-box-shadow: 0 0 0 30px black inset !important;
+  color: #fffcf3 !important;
+  -webkit-text-fill-color: #fffcf3 !important;
+}
+
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.invalidMessage {
+  color: #E61C40;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.checkboxAndText {
   display: flex;
   align-items: center;
   gap: 8px;
 }
 
-.btnForm {
+.customCheckbox {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  background-image: url('../../../../../assets/img/icons/checkbox/checkbox_unchecked.png');
+  background-size: cover;
+  cursor: pointer;
+}
+
+.customCheckboxChecked {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  background-image: url('../../../../../assets/img/icons/checkbox/checkbox_checked.png');
+  background-size: cover;
+  cursor: pointer;
+}
+
+.btnForm.disabled {
+  text-align: center;
+  border: solid 4px rgb(100, 100, 100);
+  padding: 20px 60px;
+  font-family: "Overpass";
+  font-size: 23px;
+  transition: 100ms;
+  width: fit-content;
+  color: rgb(100, 100, 100);
+  background-color: black;
+}
+
+.btnForm.enabled {
   text-align: center;
   border: solid 4px #fffcf3;
   padding: 20px 60px;
