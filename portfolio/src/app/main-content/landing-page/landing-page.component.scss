@@ -54,6 +54,11 @@ h1 {
   a {
     transform: rotate(-90deg);
     height: 300px;
+    transition: 150ms;
+
+    &:hover {
+      color: #00bc8f;
+    }
   }
 }
 
@@ -70,7 +75,7 @@ h1 {
   }
 
   img {
-    animation: moveArrow 2s ease infinite;
+    animation: moveArrow 3s ease infinite;
     z-index: -1;
   }
 }

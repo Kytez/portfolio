@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-nav-menu',
@@ -8,5 +8,11 @@ import { Component } from '@angular/core';
   styleUrl: './nav-menu.component.scss'
 })
 export class NavMenuComponent {
+
+  @Output() closeNavMenu: EventEmitter<void> = new EventEmitter<void>();
+
+  triggerCloseNavMenu() {
+    this.closeNavMenu.emit();
+  }
 
 }

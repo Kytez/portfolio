@@ -17,3 +17,82 @@ h2 {
     color: #00bc8f;
   }
 }
+
+.legalAndSocial {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.leftSide {
+  display: flex;
+  align-items: flex-end;
+}
+
+.logoAndCopyright {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  img {
+    height: 30px;
+    width: 66px;
+  }
+
+  span {
+    color: #fffcf3;
+    font-size: 23px;
+  }
+}
+
+.rightSide {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  gap: 16px;
+}
+
+.arrowUp {
+  margin-top: -64px;
+  margin-bottom: 64px;
+
+  &:hover {
+    animation: bounceUp 1s ease-in-out infinite;
+  }
+}
+
+.socialLinks {
+  display: flex;
+  gap: 64px;
+
+  a {
+    transition: 125ms ease-in-out;
+
+    &:hover {
+      transform: translateY(-16px);
+    }
+  }
+}
+
+.privacyLink {
+  color: #fffcf3;
+  font-weight: 300;
+  transition: 125ms;
+
+  &:hover {
+    color: #00bc8f;
+  }
+}
+
+@keyframes bounceUp {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-32px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}

@@ -3,4 +3,4 @@
   <img [src]="currentImage" class="burgerIcon" (click)="toggleMenuAndAnimateIcon()" />
 </nav>
 
-<app-nav-menu class="navMenu" [class.active]="menuOpen"></app-nav-menu>
+<app-nav-menu (closeNavMenu)="closeMenu()" class="navMenu" [class.active]="menuOpen"></app-nav-menu>
