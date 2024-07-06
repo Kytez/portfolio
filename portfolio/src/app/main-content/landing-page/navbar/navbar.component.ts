@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
-import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { CommonModule } from '@angular/common';
+import { NavMenuComponent } from './nav-menu/nav-menu.component';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [NavMenuComponent, CommonModule],
+  imports: [CommonModule, NavMenuComponent],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss',
 })

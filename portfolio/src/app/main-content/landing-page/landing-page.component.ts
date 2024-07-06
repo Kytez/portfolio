@@ -10,26 +10,5 @@ import { NavbarComponent } from './navbar/navbar.component';
 })
 export class LandingPageComponent {
 
-  images = [
-    '../../../../assets/img/scroll_arrows/scroll_arrow_empty.png',
-    '../../../../assets/img/scroll_arrows/scroll_arrow_1.png',
-    '../../../../assets/img/scroll_arrows/scroll_arrow_2.png',
-    '../../../../assets/img/scroll_arrows/scroll_arrow_3.png',
-    '../../../../assets/img/scroll_arrows/scroll_arrow_4.png',
-    '../../../../assets/img/scroll_arrows/scroll_arrow_5.png',
-  ];
 
-  currentImage = this.images[3];
-  imageIndex = 0;
-
-  constructor() {
-    // this.animateArrow();
-  }
-
-  animateArrow() {
-    setInterval(() => {
-        this.imageIndex = (this.imageIndex + 1) % this.images.length;
-        this.currentImage = this.images[this.imageIndex];
-    }, 200);
-}
 }
