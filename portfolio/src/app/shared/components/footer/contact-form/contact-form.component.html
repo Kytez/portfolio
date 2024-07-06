@@ -13,6 +13,7 @@
         id="name"
         name="name"
         placeholder="Your name"
+        spellcheck="false"
         required
         minlength="2"
         maxlength="30"
@@ -33,6 +34,7 @@
         id="email"
         name="email"
         placeholder="Your email"
+        spellcheck="false"
         required
         maxlength="30"
         pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
@@ -50,6 +52,7 @@
         id="message"
         name="message"
         placeholder="Your message"
+        spellcheck="false"
         required
         minlength="10"
         maxlength="800"
@@ -92,7 +95,7 @@
       class="btnForm"
       [ngClass]="{ disabled: contactForm.invalid, enabled: contactForm.valid }"
       type="submit"
-      value="Say hello ;)"
+      value="Say hello ;&#41;"
     />
   </form>
 </section>
