@@ -18,3 +18,13 @@ section {
     width: 100%;
     padding-right: 15%;
   }
+
+  @media(max-width: 500px) {
+    section {
+      padding: 80px 16px 0 16px;
+    }
+
+    h2 {
+      font-size: 32px;
+    }
+  }

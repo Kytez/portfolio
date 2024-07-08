@@ -16,7 +16,7 @@ h2 {
 .text {
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 24px;
   padding-right: 88px;
 }
 
@@ -54,7 +54,48 @@ h2 {
   }
 }
 
-.arrowImg {
+.arrowImgContainer {
   width: 100%;
   padding-right: 15%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media(max-width: 500px) {
+  section {
+    padding: 100px 16px 0 16px;
+  }
+
+  h2 {
+    font-size: 32px;
+  }
+
+  .textAndImg {
+    flex-direction: column;
+  }
+
+  .text {
+    padding-right: 0;
+  }
+
+  .buttonBox {
+    display: none;
+  }
+
+  .imgContainer {
+    margin-top: 32px;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .arrowImgContainer {
+    padding-right: 5%;
+
+    img {
+      width: 200px;
+    }
+  }
 }

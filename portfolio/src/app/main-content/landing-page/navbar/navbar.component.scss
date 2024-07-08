@@ -28,3 +28,14 @@ nav {
 .navMenu.active {
   display: block;
 }
+
+@media(max-width: 500px) {
+  nav {
+    padding: 0 16px;
+  }
+
+  .burgerIcon {
+    width: 30px;
+    height: 24px;
+  }
+}

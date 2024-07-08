@@ -9,6 +9,7 @@ section {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  align-items: center;
   padding-top: 120px;
 }
 
@@ -45,8 +46,18 @@ h1 {
   margin-left: 16px;
 }
 
+.landingPageBtn {
+  width: 260px;
+  display: none;
+
+  &:hover {
+    width: 280px;
+  }
+}
+
 .mailAndScroll {
   display: flex;
+  width: 100%;
   justify-content: space-between;
   font-family: "Overpass";
   font-size: 23px;
@@ -86,5 +97,60 @@ h1 {
   }
   to {
     transform: translateY(100%);
+  }
+}
+
+@media(max-width: 992px) {
+  .landingPageBtn {
+    display: flex;
+  }
+
+  h1 {
+    font-size: 45px;
+  }
+
+  .content {
+    padding-top: 60px;
+  }
+}
+
+@media(max-width: 500px) {
+  section {
+    padding: 0 16px;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+
+  .name {
+    font-size: 15px;
+    margin-left: 8px;
+  }
+
+  .placeholderAndName {
+    width: 240px;
+  }
+
+  .mailAndScroll {
+    font-size: 14px;
+
+    a {
+      height: 170px;
+    }
+  }
+
+  .landingPageBtn {
+    font-size: 15px;
+    width: 160px;
+    height: 50px;
+    
+    &:hover {
+      width: 180px;
+    }
+  }
+
+  .arrowAndText img {
+    width: 70px;
   }
 }
