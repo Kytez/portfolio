@@ -162,29 +162,46 @@ footer {
   }
 
   footer {
-    padding: 40px 16px 16px 16px;
+    padding: 60px 16px 16px 16px;
   }
 
   .footerContent {
     flex-direction: column;
+    gap: 32px;
   }
 
   .textContainer a {
-    display: none;
+    font-size: 15px;
   }
 
   h2 {
     font-size: 32px;
-    color: #00bc8f !important;
+    margin-block-end: 8px !important;
+    animation: pulseGreen 3s infinite;
   }
 
   .socialLinks {
-    justify-content: center;
-    gap: 20%;
+    justify-content: flex-end;
+    gap: 15%;
 
     img {
       width: 24px;
       height: 24px;
     }
+  }
+}
+
+@keyframes pulseGreen {
+  0% {
+    color: #fffcf3;
+  }
+  40% {
+    color: #00bc8f;
+  }
+  60% {
+    color: #00bc8f;
+  }
+  100% {
+    color: #fffcf3;
   }
 }

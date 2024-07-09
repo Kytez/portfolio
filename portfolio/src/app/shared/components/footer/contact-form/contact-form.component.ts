@@ -14,6 +14,13 @@ export class ContactFormComponent {
 
   http = inject(HttpClient);
 
+  placeholderName = 'Your name';
+  nameIsFocused = false;
+  placeholderEmail = 'Your email';
+  emailIsFocused = false;
+  placeholderMessage = 'Your message';
+  messageIsFocused = false;
+
   contactData = {
     name: '',
     email: '',
@@ -54,6 +61,30 @@ export class ContactFormComponent {
 
   toggleCheckbox() {
     this.contactData.privacyPolicy = !this.contactData.privacyPolicy;
+  }
+
+  nameOnFocus() {
+    this.nameIsFocused = true;
+  }
+
+  nameOnBlur() {
+    this.nameIsFocused = false;
+  }
+
+  emailOnFocus() {
+    this.emailIsFocused = true;
+  }
+
+  emailOnBlur() {
+    this.emailIsFocused = false;
+  }
+
+  messageOnFocus() {
+    this.messageIsFocused = true;
+  }
+
+  messageOnBlur() {
+    this.messageIsFocused = false;
   }
 
 }

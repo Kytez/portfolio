@@ -10,9 +10,12 @@ import { Component, Input, ElementRef, AfterViewInit, ViewChild } from '@angular
 })
 export class PortfolioProjectComponent {
 
-  // @ViewChild('onEntryText') onEntryText!: ElementRef;
+  observer: IntersectionObserver | undefined;
 
-  // private observer!: IntersectionObserver;
+  @ViewChild('imgContainer') imgContainer: ElementRef;
+  @ViewChild('imgFrame') imgFrame: ElementRef;
+  @ViewChild('circleArrow') circleArrow: ElementRef;
+  @ViewChild('projectInfoText') projectInfoText: ElementRef;
   
   @Input() projectImg = '';
   @Input() projectName = '';
@@ -23,21 +26,33 @@ export class PortfolioProjectComponent {
   @Input() projectCount = '';
   @Input() projectTotal: number;
 
-  // ngAfterViewInit(): void {
-  //   this.observer = new IntersectionObserver(this.addClass.bind(this), {
-  //     rootMargin: '0px 0px -200px 0px',
-  //     threshold: 0
-  //   });
-  //   this.observer.observe(this.onEntryText.nativeElement);
-  // }
+  ngAfterViewInit(): void {
+    if (this.imgContainer.nativeElement && window.innerWidth < 992) {
+      this.observer = new IntersectionObserver(this.handleIntersectImgContainer.bind(this), {
+        rootMargin: '0px 0px -200px 0px',
+        threshold: 1.0
+      });
+      this.observer.observe(this.imgContainer.nativeElement);
+    }
+  }
 
-  // addClass(entries: IntersectionObserverEntry[]): void {
-  //   entries.forEach(entry => {
-  //     if (entry.isIntersecting) {
-  //       (entry.target as HTMLElement).classList.add('makeVisible');
-  //     }
-  //   });
-  // }
+  handleIntersectImgContainer(entries: IntersectionObserverEntry[]): void {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        this.projectInfoText.nativeElement.classList.add('slideAnimation');
+        setTimeout(() => {
+          (entry.target as HTMLElement).classList.add('responsiveImgColorEffect');
+          this.imgFrame.nativeElement.classList.add('responsiveFrameEffect');
+          this.circleArrow.nativeElement.classList.add('responsiveCircleArrowEffect');
+          this.projectInfoText.nativeElement.classList.add('responsiveTextSlideEffect');
+        }, 100);
+        if (this.observer) {
+          this.observer.unobserve(entry.target);
+        }
+      }
+    });
+  }
+
 }
 
 

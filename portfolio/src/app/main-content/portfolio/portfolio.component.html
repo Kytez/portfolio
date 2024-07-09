@@ -29,6 +29,8 @@
       [projectTotal]="projects.length"
     ></app-portfolio-project-mirrored>
 
-    <img #arrowImgPortfolio class="arrowImgPortfolio" [src]="currentImage" />
+    <div class="arrowImgContainer">
+      <img #arrowImgPortfolio [src]="currentImage">
+    </div>
   </div>
 </section>

@@ -1,14 +1,14 @@
 <section>
   <span class="projectCount fontSyne">{{ projectCount }}/0{{ projectTotal }}</span>
 
-  <div class="imgContainer">
+  <div #imgContainer class="imgContainer">
     <img class="screenshot" src="{{ projectImg }}" />
-    <div class="hoverFrame" ></div>
-    <img class="circleArrow" src="../../../../assets/img/icons/circleArrow.png">
+    <div #imgFrame class="hoverFrame" ></div>
+    <img #circleArrow class="circleArrow" src="../../../../assets/img/icons/circleArrow.png">
   </div>
 
   <div class="textContainer">
-    <div class="projectInfo">
+    <div #projectInfoText class="projectInfo">
       <h3 class="fontSyne">{{ projectName }}</h3>
       <span class="fontOverpass colorGreen">{{ projectTechStack }}</span>
       <p>{{ projectDescription }}</p>

@@ -13,6 +13,16 @@ form {
   align-items: center;
   gap: 24px;
   width: 100%;
+  margin-top: 32px;
+}
+
+.placeholder {
+  position: absolute;
+  background-color: black;
+  width: fit-content;
+  padding: 0 8px;
+  top: -10px;
+  left: 8px;
 }
 
 .inputField {
@@ -59,6 +69,7 @@ input:-webkit-autofill:active{
   display: flex;
   flex-direction: column;
   gap: 8px;
+  position: relative;
 }
 
 .invalidMessage {
@@ -133,4 +144,73 @@ input:-webkit-autofill:active{
 
 .fontS23 {
   font-size: 23px;
+}
+
+@media(max-width: 500px) {
+  section {
+    width: 100vw;
+    padding: 0 16px;
+  }
+
+  .fontS32W700 {
+    text-align: center;
+  }
+
+  .fontS23 {
+    text-align: center;
+    font-weight: 300;
+    font-size: 20px;
+  }
+
+  .inputContainer {
+    width: 100%;
+  }
+
+  .inputField {
+    width: 100%;
+  }
+
+  .checkboxAndText {
+    padding: 0 8px;
+
+    span {
+      margin-left: 8px;
+      font-weight: 300;
+      font-size: 14px;
+    }
+  }
+
+  .customCheckbox {
+    padding-right: 16px;
+  }
+
+  .customCheckboxChecked {
+    padding-right: 16px;
+  }
+
+  .btnForm.disabled {
+    height: 60px;
+    width: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    font-size: 20px;
+  }
+
+  .btnForm.enabled {
+    height: 60px;
+    width: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    font-size: 20px;
+
+    &:hover {
+      font-weight: 700;
+      width: 200px;
+      padding: 0;
+    }
+  }
 }

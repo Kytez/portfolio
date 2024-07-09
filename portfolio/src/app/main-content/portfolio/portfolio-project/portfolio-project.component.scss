@@ -20,10 +20,10 @@ section {
     }
 
     .projectInfo {
-      display: flex;
       animation: slideInfoText 225ms ease-in-out;
       transform: translateX(0);
       opacity: 1;
+      display: flex;
     }
 
     .circleArrow {
@@ -110,6 +110,37 @@ section {
   width: 80%;
 }
 
+////////////////////////////////////////// responsive effects //////////////////////////////////////////
+
+.responsiveImgColorEffect {
+  filter: grayscale(0);
+}
+
+.responsiveFrameEffect {
+  border-color: black !important;
+  top: 10px !important;
+  left: 10px !important;
+  right: -10px !important;
+  bottom: -10px !important;
+}
+
+.slideAnimation {
+  animation: slideInfoTextFromAbove 0.5s ease-in-out;
+}
+
+.responsiveTextSlideEffect {
+  display: flex !important;
+  transform: translateY(0) !important;
+  opacity: 1 !important;
+}
+
+.responsiveCircleArrowEffect {
+  animation: circleArrow 225ms ease-in-out;
+  display: flex !important;
+}
+
+//////////////////////////////////////////// keyframes ////////////////////////////////////////////////
+
 @keyframes slideInfoText {
   from {
     transform: translateX(-120%);
@@ -144,21 +175,12 @@ section {
   }
 }
 
-@media(max-width: 500px) {
+@media (max-width: 500px) {
   section {
     flex-direction: column;
     padding-top: 40px;
-    gap: 32px;
-
-    &:hover {
-      .projectInfo {
-        animation: none;
-      }
-
-      .imgContainer {
-        filter: grayscale(0);
-      }
-    }
+    gap: 40px;
+    pointer-events: none;
   }
 
   .projectCount {
@@ -167,7 +189,6 @@ section {
 
   .imgContainer {
     width: 100%;
-    filter: grayscale(0);
   }
 
   .circleArrow {
@@ -185,8 +206,7 @@ section {
 
   .projectInfo {
     display: flex;
-    transform: translateX(0);
-    opacity: 1;
+    transform: translateY(-120%) translateX(0);
 
     h3 {
       font-size: 32px;

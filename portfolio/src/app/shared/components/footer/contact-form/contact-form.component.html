@@ -6,13 +6,18 @@
 
   <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
     <div class="inputContainer">
+      @if (nameIsFocused) {
+        <label class="placeholder">{{ placeholderName }}</label>
+      }
       <input
         #name="ngModel"
         class="inputField"
         type="text"
         id="name"
         name="name"
-        placeholder="Your name"
+        [placeholder]="nameIsFocused ? '' : placeholderName"
+        (focus)="nameOnFocus()" 
+        (blur)="nameOnBlur()"
         spellcheck="false"
         required
         minlength="2"
@@ -27,13 +32,18 @@
     </div>
 
     <div class="inputContainer">
+      @if (emailIsFocused) {
+        <label class="placeholder">{{ placeholderEmail }}</label>
+      }
       <input
         #email="ngModel"
         class="inputField"
         type="email"
         id="email"
         name="email"
-        placeholder="Your email"
+        [placeholder]="emailIsFocused ? '' : placeholderEmail"
+        (focus)="emailOnFocus()" 
+        (blur)="emailOnBlur()"
         spellcheck="false"
         required
         maxlength="30"
@@ -46,12 +56,17 @@
     </div>
 
     <div class="inputContainer">
+      @if (messageIsFocused) {
+        <label class="placeholder">{{ placeholderMessage }}</label>
+      }
       <textarea
         #message="ngModel"
         class="inputField"
         id="message"
         name="message"
-        placeholder="Your message"
+        [placeholder]="messageIsFocused ? '' : placeholderMessage"
+        (focus)="messageOnFocus()" 
+        (blur)="messageOnBlur()"
         spellcheck="false"
         required
         minlength="10"

@@ -110,6 +110,37 @@ section {
     justify-content: space-between;
     width: 80%;
   }
+
+  ///////////////////////////////////// responsive effects ///////////////////////////////////////
+
+  .responsiveImgColorEffect {
+    filter: grayscale(0);
+  }
+  
+  .responsiveFrameEffect {
+    border-color: black !important;
+    top: 10px !important;
+    left: -10px !important;
+    right: 10px !important;
+    bottom: -10px !important;
+  }
+  
+  .slideAnimation {
+    animation: slideInfoTextFromAbove 0.5s ease-in-out;
+  }
+  
+  .responsiveTextSlideEffect {
+    display: flex !important;
+    transform: translateY(0) !important;
+    opacity: 1 !important;
+  }
+  
+  .responsiveCircleArrowEffect {
+    animation: circleArrow 225ms ease-in-out;
+    display: flex !important;
+  }
+
+  //////////////////////////////////////// keyframes /////////////////////////////////////////////
   
   @keyframes slideInfoText {
     from {
@@ -121,6 +152,20 @@ section {
       opacity: 1;
     }
   }
+
+  @keyframes slideInfoTextFromAbove {
+    0% {
+      transform: translateY(-120%);
+      opacity: 0;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
   
   @keyframes circleArrow {
     from {
@@ -128,5 +173,78 @@ section {
     }
     to {
       transform: rotate(270deg);
+    }
+  }
+
+  @media (max-width: 500px) {
+    section {
+      flex-direction: column;
+      padding-top: 40px;
+      gap: 40px;
+      pointer-events: none;
+    }
+  
+    .projectCount {
+      font-size: 23px;
+    }
+  
+    .imgContainer {
+      width: 100%;
+    }
+  
+    .circleArrow {
+      width: 40px !important;
+      height: 40px;
+      left: calc(50% - 20px);
+      margin-left: 0;
+      top: 100%;
+      margin-top: -10px;
+    }
+  
+    .textContainer {
+      width: 100%;
+    }
+  
+    .projectInfo {
+      display: flex;
+      transform: translateY(-120%) translateX(0);
+      align-items: flex-end;
+      text-align: right;
+  
+      h3 {
+        font-size: 32px;
+      }
+  
+      span {
+        font-size: 16px;
+      }
+  
+      p {
+        font-size: 15px;
+      }
+    }
+  
+    .btns {
+      width: 100%;
+    }
+  
+    .btn {
+      width: 120px;
+      height: 50px;
+      font-size: 16px;
+  
+      &:hover {
+        width: 140px;
+      }
+    }
+  
+    .btnSecondary {
+      width: 120px;
+      height: 50px;
+      font-size: 16px;
+  
+      &:hover {
+        width: 140px;
+      }
     }
   }

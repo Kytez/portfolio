@@ -14,9 +14,11 @@ section {
       }
   }
 
-  .arrowImgPortfolio {
+  .arrowImgContainer {
     width: 100%;
     padding-right: 15%;
+    display: flex;
+    justify-content: flex-end;
   }
 
   @media(max-width: 500px) {
@@ -26,5 +28,13 @@ section {
 
     h2 {
       font-size: 32px;
+    }
+
+    .arrowImgContainer {
+      padding-right: 5%;
+  
+      img {
+        width: 200px;
+      }
     }
   }

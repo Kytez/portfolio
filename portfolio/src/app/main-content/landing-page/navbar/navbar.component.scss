@@ -12,6 +12,11 @@ nav {
   background-color: #fffcf3;
 }
 
+.logo {
+  width: 66px;
+  height: 30px;
+}
+
 .burgerIcon {
   width: 40px;
   height: 32px;
@@ -37,5 +42,10 @@ nav {
   .burgerIcon {
     width: 30px;
     height: 24px;
+  }
+
+  .logo {
+    width: 56px;
+    height: 26px;
   }
 }

@@ -19,9 +19,18 @@ export class AboutMeComponent implements AfterViewInit {
   imageIndex = 0;
   observer: IntersectionObserver | undefined;
   intervalId: any;
+
   @ViewChild('arrowImg') arrowImg: ElementRef;
+  @ViewChild('imgFrame') imgFrame: ElementRef;
 
   ngAfterViewInit(): void {
+    if (this.imgFrame.nativeElement) {
+      this.observer = new IntersectionObserver(this.handleIntersectImgFrame.bind(this), {
+        rootMargin: '0px 0px -200px 0px',
+        threshold: 1.0
+      });
+      this.observer.observe(this.imgFrame.nativeElement);
+    }
     if (this.arrowImg.nativeElement) {
       this.observer = new IntersectionObserver(this.handleIntersect.bind(this), {
         rootMargin: '0px 0px -200px 0px',
@@ -29,6 +38,17 @@ export class AboutMeComponent implements AfterViewInit {
       });
       this.observer.observe(this.arrowImg.nativeElement);
     }
+  }
+
+  handleIntersectImgFrame(entries: IntersectionObserverEntry[]): void {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        (entry.target as HTMLElement).classList.add('responsiveEffect');
+        if (this.observer) {
+          this.observer.unobserve(entry.target);
+        }
+      }
+    });
   }
 
   handleIntersect(entries: IntersectionObserverEntry[]): void {
