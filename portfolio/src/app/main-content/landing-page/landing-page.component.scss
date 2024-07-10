@@ -21,7 +21,7 @@ header {
 
 h1 {
   font-family: "Syne";
-  font-size: 128px;
+  font-size: 112px;
   font-weight: 800;
   text-align: center;
 }
@@ -30,7 +30,7 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 930px;
+  width: 850px;
 }
 
 .placeholder {
@@ -41,7 +41,7 @@ h1 {
 
 .name {
   font-family: "Overpass";
-  font-size: 48px;
+  font-size: 44px;
   font-weight: 700;
   margin-left: 16px;
 }
@@ -60,7 +60,7 @@ h1 {
   width: 100%;
   justify-content: space-between;
   font-family: "Overpass";
-  font-size: 23px;
+  font-size: 22px;
 
   a {
     transform: rotate(-90deg);
@@ -75,7 +75,7 @@ h1 {
   justify-content: space-between;
   gap: 8px;
   overflow: hidden;
-  min-width: 116px;
+  min-width: 108px;
 
   span {
     text-align: center;
@@ -85,6 +85,7 @@ h1 {
   img {
     animation: moveArrow 3s ease infinite;
     z-index: -1;
+    width: 108px;
   }
 }
 
@@ -118,25 +119,46 @@ h1 {
 }
 
 @media(max-width: 992px) {
+
+  section {
+    padding: 0 32px;
+  }
+
   .landingPageBtn {
     display: flex;
   }
 
   h1 {
-    font-size: 80px;
+    font-size: 72px;
   }
 
   .name {
-    font-size: 30px;
+    font-size: 28px;
     margin-left: 8px;
   }
 
   .placeholderAndName {
-    width: 600px;
+    width: 520px;
   }
 
   .content {
     padding-top: 60px;
+  }
+
+  .mailAndScroll {
+    font-size: 18px;
+
+    a {
+      height: 220px;
+    }
+  }
+
+  .arrowAndText {
+    min-width: 80px;
+
+    img {
+      width: 80px;
+    }
   }
 }
 
@@ -155,8 +177,30 @@ h1 {
     width: 380px;
   }
 
-  .content {
-    padding-top: 60px;
+  .mailAndScroll {
+    font-size: 16px;
+
+    a {
+      height: 200px;
+    }
+  }
+
+  .arrowAndText {
+    min-width: 70px;
+
+    img {
+      width: 70px;
+    }
+  }
+
+  .landingPageBtn {
+    font-size: 16px;
+    width: 180px;
+    height: 60px;
+    
+    &:hover {
+      width: 200px;
+    }
   }
 }
 

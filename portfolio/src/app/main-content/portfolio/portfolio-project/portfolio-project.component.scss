@@ -42,6 +42,7 @@ section {
 
 .screenshot {
   width: 100%;
+  height: 100%;
   box-shadow: 0 0 4px rgba($color: #000000, $alpha: 0.1);
 }
 
@@ -107,7 +108,11 @@ section {
 .btns {
   display: flex;
   justify-content: space-between;
-  width: 80%;
+  width: 100%;
+}
+
+.btnSecondary {
+  margin-right: calc(30% - 100px);
 }
 
 ////////////////////////////////////////// responsive effects //////////////////////////////////////////
@@ -175,33 +180,214 @@ section {
   }
 }
 
-@media (max-width: 500px) {
+@media(max-width: 1450px) {
+  .textContainer {
+    align-items: flex-end;
+  }
+
+  .projectCount {
+    font-size: 40px;
+  }
+
+  .btn {
+    width: 180px;
+    height: 60px;
+    font-size: 20px;
+
+    &:hover {
+      width: 200px;
+    }
+  }
+
+  .btnSecondary {
+    width: 180px;
+    height: 60px;
+    font-size: 20px;
+
+    &:hover {
+      width: 200px;
+    }
+  }
+}
+
+@media(max-width: 1250px) {
+  section {
+    gap: 80px;
+  }
+
+  .textContainer {
+    width: calc(50% - 80px);
+  }
+
+  .projectInfo {
+    gap: 12px;
+
+    h3 {
+      font-size: 40px;
+    }
+
+    span {
+      font-size: 20px;
+    }
+  }
+
+
+}
+
+@media(max-width: 1160px) {
+  .imgContainer {
+    height: 240px;
+  }
+
+  .projectCount {
+    font-size: 36px;
+  }
+
+  .btn {
+    width: 160px;
+    height: 50px;
+    font-size: 18px;
+
+    &:hover {
+      width: 180px;
+    }
+  }
+
+  .btnSecondary {
+    width: 160px;
+    height: 50px;
+    font-size: 18px;
+
+    &:hover {
+      width: 180px;
+    }
+  }
+
+  .projectInfo {
+    gap: 8px;
+
+    h3 {
+      font-size: 32px;
+    }
+
+    span {
+      font-size: 16px;
+    }
+
+    p {
+      font-size: 14px;
+    }
+  }
+}
+
+@media(max-width: 1060px) {
+  .imgContainer {
+    height: 220px;
+  }
+
+  .btn {
+    width: 140px;
+    height: 50px;
+    font-size: 16px;
+
+    &:hover {
+      width: 160px;
+    }
+  }
+
+  .btnSecondary {
+    width: 140px;
+    height: 50px;
+    font-size: 16px;
+
+    &:hover {
+      width: 160px;
+    }
+  }
+}
+
+@media(max-width: 992px) {
   section {
     flex-direction: column;
+    align-items: center;
     padding-top: 40px;
+    margin-top: 40px;
     gap: 40px;
     pointer-events: none;
   }
 
-  .projectCount {
-    font-size: 23px;
-  }
-
   .imgContainer {
     width: 100%;
+    height: auto;
+    margin-top: 16px;
+  }
+
+  .circleArrow {
+    width: 46px !important;
+    height: 46px;
+    right: calc(50% - 20px);
+    margin-right: 0;
+    top: 100%;
+    margin-top: -13px;
+  }
+
+  .textContainer {
+    width: 100%;
+  }
+
+  .projectInfo {
+    display: flex;
+    transform: translateY(-120%) translateX(0);
+    gap: 16px;
+
+    h3 {
+      font-size: 40px;
+    }
+
+    span {
+      font-size: 18px;
+    }
+
+    p {
+      font-size: 16px;
+    }
+  }
+
+  .btn {
+    width: 160px;
+    height: 60px;
+    font-size: 18px;
+
+    &:hover {
+      width: 180px;
+    }
+  }
+
+  .btnSecondary {
+    width: 160px;
+    height: 60px;
+    font-size: 18px;
+    margin-right: calc(80% - 260px);
+
+    &:hover {
+      width: 180px;
+    }
+  }
+}
+
+@media(max-width: 700px) {
+  
+}
+
+@media (max-width: 500px) {
+  .projectCount {
+    font-size: 23px;
   }
 
   .circleArrow {
     width: 40px !important;
     height: 40px;
-    right: calc(50% - 20px);
-    margin-right: 0;
-    top: 100%;
     margin-top: -10px;
-  }
-
-  .textContainer {
-    width: 100%;
   }
 
   .projectInfo {
@@ -221,10 +407,6 @@ section {
     }
   }
 
-  .btns {
-    width: 100%;
-  }
-
   .btn {
     width: 120px;
     height: 50px;
@@ -239,6 +421,7 @@ section {
     width: 120px;
     height: 50px;
     font-size: 16px;
+    margin-right: calc(80% - 220px);
 
     &:hover {
       width: 140px;

@@ -24,7 +24,7 @@ export class AboutMeComponent implements AfterViewInit {
   @ViewChild('imgFrame') imgFrame: ElementRef;
 
   ngAfterViewInit(): void {
-    if (this.imgFrame.nativeElement) {
+    if (this.imgFrame.nativeElement && window.innerWidth < 992) {
       this.observer = new IntersectionObserver(this.handleIntersectImgFrame.bind(this), {
         rootMargin: '0px 0px -200px 0px',
         threshold: 1.0

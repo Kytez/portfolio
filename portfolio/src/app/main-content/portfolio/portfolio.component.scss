@@ -21,6 +21,12 @@ section {
     justify-content: flex-end;
   }
 
+  @media(max-width: 700px) {
+    section {
+      padding: 80px 32px 0 32px;
+    }
+  }
+
   @media(max-width: 500px) {
     section {
       padding: 80px 16px 0 16px;

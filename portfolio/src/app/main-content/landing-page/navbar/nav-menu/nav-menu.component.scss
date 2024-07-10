@@ -20,7 +20,7 @@ section {
   height: 100%;
 
   a {
-    font-size: 96px;
+    font-size: 88px;
     font-weight: 700;
     position: relative;
     display: inline-block;
@@ -114,49 +114,99 @@ footer {
   }
 }
 
-@media(max-width: 500px) {
+@media(max-width: 992px) {
   .navLinks {
     padding: 0 16px;
     justify-content: center;
     gap: 10%;
 
     a {
-      font-size: 32px;
+      font-size: 60px;
 
       &::before {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 20px;
-        height: 2px;
-        background: black;
-        transition: all 125ms ease-in-out;
+        width: 24px;
+        height: 3px;
       }
   
       &::after {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 0;
+        width: 3px;
+        height: 24px;
+      }
+    }
+  }
+
+  footer {
+    padding: 60px 24px 24px 24px;
+  }
+
+  .footerContent {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .textContainer a {
+    font-size: 18px;
+  }
+
+  h2 {
+    font-size: 48px;
+    margin-block-end: 8px !important;
+    animation: pulseGreen 3s infinite;
+  }
+
+  .socialLinks {
+    justify-content: flex-end;
+    gap: 10%;
+
+    img {
+      width: 28px;
+      height: 28px;
+    }
+  }
+}
+
+@media(max-width: 700px) {
+  .navLinks {
+    a {
+      font-size: 48px;
+    }
+}
+
+.textContainer a {
+  font-size: 16px;
+}
+
+h2 {
+  font-size: 40px;
+}
+
+.socialLinks {
+  gap: 10%;
+
+  img {
+    width: 26px;
+    height: 26px;
+  }
+}
+}
+
+@media(max-width: 500px) {
+  section {
+    height: calc(100vh - 64px);
+  }
+
+  .navLinks {
+    a {
+      font-size: 36px;
+
+      &::before {
+        width: 20px;
+        height: 2px;
+      }
+  
+      &::after {
         width: 2px;
         height: 20px;
-        background: black;
-        transition: all 125ms ease-in-out;
-      }
-  
-      &:hover::before {
-        width: 40%;
-        bottom: 0;
-        left: 60%;
-        transition: all 225ms ease-in-out;
-      }
-  
-      &:hover::after {
-        height: 0;
-        bottom: 0;
-        left: 0;
-        transition: all 25ms ease-in-out;
       }
     }
   }
@@ -166,7 +216,6 @@ footer {
   }
 
   .footerContent {
-    flex-direction: column;
     gap: 32px;
   }
 
@@ -176,12 +225,9 @@ footer {
 
   h2 {
     font-size: 32px;
-    margin-block-end: 8px !important;
-    animation: pulseGreen 3s infinite;
   }
 
   .socialLinks {
-    justify-content: flex-end;
     gap: 15%;
 
     img {

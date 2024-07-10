@@ -34,7 +34,7 @@ nav {
   display: block;
 }
 
-@media(max-width: 9920px) {
+@media(max-width: 992px) {
   nav {
     padding: 0 32px;
   }
@@ -43,6 +43,7 @@ nav {
 @media(max-width: 500px) {
   nav {
     padding: 0 16px;
+    height: 64px;
   }
 
   .burgerIcon {
