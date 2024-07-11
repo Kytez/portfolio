@@ -97,14 +97,9 @@ h2 {
   }
 }
 
-@media(max-width: 500px) {
+@media(max-width: 992px) {
   section {
-    padding: 50px 16px;
     margin-top: 0;
-  }
-
-  h2 {
-    font-size: 40px;
   }
 
   .arrowUp {
@@ -117,7 +112,7 @@ h2 {
 
   .rightSide {
     align-items: center;
-    gap: 24px;
+    gap: 32px;
   }
 
   .legalAndSocial {
@@ -127,9 +122,24 @@ h2 {
   }
 
   .logoAndCopyright {
-
     span {
       display: none;
     }
+  }
+}
+
+@media(max-width: 700px) {
+  section {
+    padding: 100px 16px 50px 16px;
+  }
+}
+
+@media(max-width: 500px) {
+  section {
+    padding: 50px 16px;
+  }
+
+  h2 {
+    font-size: 40px;
   }
 }

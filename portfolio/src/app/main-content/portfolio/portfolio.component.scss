@@ -25,6 +25,12 @@ section {
     section {
       padding: 80px 32px 0 32px;
     }
+
+    .arrowImgContainer {
+      img {
+        width: 180px;
+      }
+    }
   }
 
   @media(max-width: 500px) {

@@ -35,7 +35,7 @@ section {
 
 .imgContainer {
   position: relative;
-  width: 50%;
+  width: 45%;
   filter: grayscale(1);
   z-index: 1;
 }
@@ -67,7 +67,7 @@ section {
 }
 
 .textContainer {
-  width: calc(50% - 120px);
+  flex: 1;
   display: flex;
   align-items: center;
   position: relative;
@@ -180,11 +180,13 @@ section {
   }
 }
 
-@media(max-width: 1450px) {
+@media(max-width: 1550px) {
   .textContainer {
     align-items: flex-end;
   }
+}
 
+@media(max-width: 1450px) {
   .projectCount {
     font-size: 40px;
   }
@@ -210,17 +212,18 @@ section {
   }
 }
 
-@media(max-width: 1250px) {
+@media(max-width: 1350px) {
+  .projectInfo {
+    gap: 8px;
+  }
+}
+
+@media(max-width: 1255px) {
   section {
     gap: 80px;
   }
 
-  .textContainer {
-    width: calc(50% - 80px);
-  }
-
   .projectInfo {
-    gap: 12px;
 
     h3 {
       font-size: 40px;
@@ -230,8 +233,6 @@ section {
       font-size: 20px;
     }
   }
-
-
 }
 
 @media(max-width: 1160px) {
@@ -267,7 +268,7 @@ section {
     gap: 8px;
 
     h3 {
-      font-size: 32px;
+      font-size: 30px;
     }
 
     span {
@@ -283,6 +284,12 @@ section {
 @media(max-width: 1060px) {
   .imgContainer {
     height: 220px;
+  }
+
+  .projectInfo {
+    h3 {
+      font-size: 28px;
+    }
   }
 
   .btn {
@@ -312,7 +319,7 @@ section {
     align-items: center;
     padding-top: 40px;
     margin-top: 40px;
-    gap: 40px;
+    gap: 64px;
     pointer-events: none;
   }
 
@@ -373,10 +380,6 @@ section {
       width: 180px;
     }
   }
-}
-
-@media(max-width: 700px) {
-  
 }
 
 @media (max-width: 500px) {

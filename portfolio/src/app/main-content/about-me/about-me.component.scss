@@ -83,6 +83,14 @@ h2 {
   }
 }
 
+@media(max-width: 1250px) {
+  .imgContainer {  
+    img {
+      width: 350px;
+    }
+  }
+}
+
 @media(max-width: 992px) {
   section {
     padding: 100px 32px 0 32px;
@@ -121,7 +129,7 @@ h2 {
   }
 
   .arrowImgContainer {
-    padding-right: 40%;
+    padding-right: 25%;
   }
 }
 
@@ -130,8 +138,14 @@ h2 {
     font-size: 18px;
   }
 
+  .imgContainer { 
+    img {
+      width: 400px;
+    }
+  }
+
   .arrowImgContainer {
-    padding-right: 30%;
+    padding-right: 20%;
   }
 }
 
@@ -141,12 +155,12 @@ h2 {
   }
 
   .arrowImgContainer {
-    padding-right: 20%;
+    padding-right: 15%;
   }
 
   .imgContainer { 
     img {
-      width: 436px;
+      width: 380px;
     }
   }
 }
@@ -167,6 +181,7 @@ h2 {
   .imgContainer {
     img {
       width: 100%;
+      max-width: 350px;
     }
   }
 

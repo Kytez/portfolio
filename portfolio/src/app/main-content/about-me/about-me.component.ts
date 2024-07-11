@@ -27,11 +27,11 @@ export class AboutMeComponent implements AfterViewInit {
     if (this.imgFrame.nativeElement && window.innerWidth < 992) {
       this.observer = new IntersectionObserver(this.handleIntersectImgFrame.bind(this), {
         rootMargin: '0px 0px -200px 0px',
-        threshold: 1.0
+        threshold: 0.5
       });
       this.observer.observe(this.imgFrame.nativeElement);
     }
-    if (this.arrowImg.nativeElement) {
+    if (this.arrowImg.nativeElement && window.innerWidth < 992) {
       this.observer = new IntersectionObserver(this.handleIntersect.bind(this), {
         rootMargin: '0px 0px -200px 0px',
         threshold: 1.0
