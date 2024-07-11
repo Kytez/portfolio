@@ -9,14 +9,6 @@ import { Component, AfterViewInit, ElementRef, ViewChild } from '@angular/core';
 })
 export class AboutMeComponent implements AfterViewInit {
 
-  images = [
-    '../../../../assets/img/arrow_left/arrow_left_1.png',
-    '../../../../assets/img/arrow_left/arrow_left_2.png',
-    '../../../../assets/img/arrow_left/arrow_left_3.png'
-  ];
-
-  currentImage = this.images[0];
-  imageIndex = 0;
   observer: IntersectionObserver | undefined;
   intervalId: any;
 
@@ -31,7 +23,7 @@ export class AboutMeComponent implements AfterViewInit {
       });
       this.observer.observe(this.imgFrame.nativeElement);
     }
-    if (this.arrowImg.nativeElement && window.innerWidth < 992) {
+    if (this.arrowImg.nativeElement) {
       this.observer = new IntersectionObserver(this.handleIntersect.bind(this), {
         rootMargin: '0px 0px -200px 0px',
         threshold: 1.0
@@ -54,23 +46,14 @@ export class AboutMeComponent implements AfterViewInit {
   handleIntersect(entries: IntersectionObserverEntry[]): void {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        this.animateArrow();
+        (entry.target as HTMLElement).classList.add('animateArrow');
+        setTimeout(() => {
+          (entry.target as HTMLElement).classList.add('arrowFinalPosition');
+        }, 250);
         if (this.observer) {
           this.observer.unobserve(entry.target);
         }
       }
     });
   }
-
-  animateArrow() {
-    this.intervalId = setInterval(() => {
-      if (this.imageIndex < this.images.length - 1) {
-        this.imageIndex++;
-      } else {
-        clearInterval(this.intervalId);
-      }
-      this.currentImage = this.images[this.imageIndex];
-    }, 80);
-  }
-
 }

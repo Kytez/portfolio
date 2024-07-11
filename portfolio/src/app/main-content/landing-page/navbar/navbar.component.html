@@ -1,6 +1,20 @@
 <nav>
-  <a href="#"><img src="../../../../assets/img/logo_schwarz_cutted.png" class="logo" /></a>
-  <img [src]="currentImage" class="burgerIcon" (click)="toggleMenuAndAnimateIcon()" />
+  <a href="#"
+    ><img src="../../../../assets/img/logo_schwarz_cutted.png" class="logo"
+  /></a>
+  <div>
+    <button
+      class="burger-button"
+      (click)="toggleMenu()"
+      [class.active]="menuOpen"
+    >
+      <div class="spinner diagonal1" [class.active]="menuOpen"></div>
+      <div class="spinner horizontal" [class.active]="menuOpen"></div>
+      <div class="spinner diagonal2" [class.active]="menuOpen"></div>
+    </button>
+  </div>
 </nav>
 
-<app-nav-menu (closeNavMenu)="closeMenu()" class="navMenu" [class.active]="menuOpen"></app-nav-menu>
+@if (menuOpen) {
+    <app-nav-menu (closeNavMenu)="closeMenu()" [activate]="menuOpen"></app-nav-menu>
+}

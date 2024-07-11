@@ -6,6 +6,7 @@
 
 body {
   background-color: #fffcf3;
+  overflow-x: hidden;
 }
 
 @font-face {
@@ -113,6 +114,23 @@ p {
   width: 100%;
 }
 
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #fffcf3;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #5555557c;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #00bc8f;
+}
+
 @media(max-width: 992px) {
   p {
     font-size: 20px;
@@ -120,6 +138,10 @@ p {
 
   h2 {
     font-size: 68px;
+  }
+
+  ::-webkit-scrollbar {
+    display: none;
   }
 }
 

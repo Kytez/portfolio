@@ -7,7 +7,7 @@ nav {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 9;
+  z-index: 100;
   padding: 0 100px;
   background-color: #fffcf3;
 }
@@ -17,21 +17,60 @@ nav {
   height: 30px;
 }
 
-.burgerIcon {
-  width: 40px;
-  height: 32px;
-
-  &:hover {
-    cursor: pointer;
-  }
+.burger-button {
+  width: 35px;
+  height: 30px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 
-.navMenu {
-  display: none;
+.spinner {
+  transition: all 0.3s;
+  box-sizing: border-box;
+  height: 3px;
+  width: 100%;
+  background-color: black;
 }
 
-.navMenu.active {
-  display: block;
+.diagonal1 {
+  position: absolute;
+  top: 0px;
+  transition: all 225ms ease-in-out;
+}
+
+.diagonal2 {
+  bottom: 0;
+  position: absolute;
+  transition: all 225ms ease-in-out;
+}
+
+.horizontal {
+  position: absolute;
+  transition: all 225ms ease-in-out;
+}
+
+.burger-button.active .diagonal1 {
+  transform: rotate(-45deg);
+  width: 50%;
+  right: 2.5px;
+  top: 7.5px;
+}
+
+.burger-button.active .diagonal2 {
+  transform: rotate(-45deg);
+  width: 50%;
+  left: 2.5px;
+  bottom: 7.5px;
+}
+
+.burger-button.active .horizontal {
+  transform: rotate(45deg);
 }
 
 @media(max-width: 992px) {

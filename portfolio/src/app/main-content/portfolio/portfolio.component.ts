@@ -22,8 +22,8 @@ export class PortfolioComponent {
       techStack: 'JavaScript | CSS | HTML | Firebase',
       description:
         'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
-      githubUrl: '',
-      liveTestUrl: '',
+      githubUrl: 'https://github.com/Kytez/join139',
+      liveTestUrl: 'https://marcel-luwinski.developerakademie.net/join/index.html',
     },
     {
       image: '../../../../assets/img/portfolio_screenshots/pollo_loco.png',
@@ -31,26 +31,11 @@ export class PortfolioComponent {
       techStack: 'JavaScript | CSS | HTML',
       description:
         'Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.',
-      githubUrl: '',
-      liveTestUrl: '',
+      githubUrl: 'https://github.com/Kytez/elpolloloco',
+      liveTestUrl: 'https://marcel-luwinski.developerakademie.net/pollo_loco/index.html',
     },
-    // {
-    //   image: '../../../../assets/img/portfolio_screenshots/webdev_luwinski.png',
-    //   name: 'Webdevelopment Luwinski',
-    //   techStack: 'JavaScript | CSS | HTML',
-    //   description:
-    //     'Business Website for my inactive side hustle.',
-    // }
   ];
 
-  images = [
-    '../../../../assets/img/arrow_left/arrow_left_1.png',
-    '../../../../assets/img/arrow_left/arrow_left_2.png',
-    '../../../../assets/img/arrow_left/arrow_left_3.png',
-  ];
-
-  currentImage = this.images[0];
-  imageIndex = 0;
   observer: IntersectionObserver | undefined;
   intervalId: any;
   @ViewChild('arrowImgPortfolio') arrowImgPortfolio: ElementRef;
@@ -71,22 +56,14 @@ export class PortfolioComponent {
   handleIntersect(entries: IntersectionObserverEntry[]): void {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        this.animateArrow();
+        (entry.target as HTMLElement).classList.add('animateArrow');
+        setTimeout(() => {
+          (entry.target as HTMLElement).classList.add('arrowFinalPosition');
+        }, 250);
         if (this.observer) {
           this.observer.unobserve(entry.target);
         }
       }
     });
-  }
-
-  animateArrow() {
-    this.intervalId = setInterval(() => {
-      if (this.imageIndex < this.images.length - 1) {
-        this.imageIndex++;
-      } else {
-        clearInterval(this.intervalId);
-      }
-      this.currentImage = this.images[this.imageIndex];
-    }, 80);
   }
 }

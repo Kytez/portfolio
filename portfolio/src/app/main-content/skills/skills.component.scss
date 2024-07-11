@@ -57,12 +57,53 @@ h2 {
     }
 }
 
-.arrowImgSkillsContainer {
+.arrowImgContainer {
     width: 100%;
+    height: 250px;
     padding-left: 15%;
     display: flex;
     justify-content: flex-start;
-}
+  }
+  
+  .arrowImgBox {
+    height: 100%;
+    width: 250px;
+    position: relative;
+  }
+  
+  .arrowImgBox img {
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    right: 50px;
+    bottom: 50px;
+  }
+  
+  .animateArrow {
+    animation: animateArrow 250ms ease-in-out;
+  }
+  
+  .arrowFinalPosition {
+    top: 50px !important;
+    left: 50px !important;
+    right: -50px !important;
+    bottom: -50px !important;
+  }
+  
+  @keyframes animateArrow {
+    0% {
+      top: -50px;
+      left: -50px;
+      right: 50px;
+      bottom: 50px;
+    }
+    100% {
+      top: 50px;
+      left: 50px;
+      right: -50px;
+      bottom: -50px;
+    }
+  }
 
 @keyframes animateIconSpin {
     0% {
@@ -180,11 +221,11 @@ h2 {
         }
     }
 
-    .arrowImgSkillsContainer {
-        padding-left: 5%;
-    }
-
-    .arrowImgSkills {
-        width: 200px;
-    }
+    .arrowImgContainer {
+        padding-left: 0;
+    
+        img {
+          width: 200px;
+        }
+      }
 }
