@@ -139,6 +139,32 @@ input:-webkit-autofill:active{
   }
 }
 
+.feedbackMsg {
+  background-color: #00bc8f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  padding: 16px;
+  border-radius: 10px;
+  position: fixed;
+  top: 32px;
+  left: calc(50% - 200px);
+  z-index: 101;
+  transition: 500ms all ease-in-out;
+  transform: translateY(-200px);
+
+  span {
+    color: #fffcf3;
+    font-weight: 700;
+    text-align: center;
+  }
+}
+
+.active {
+  transform: translateY(0) !important;
+}
+
 .fontS32W700 {
   font-size: 32px;
   font-weight: 700;
@@ -213,6 +239,15 @@ input:-webkit-autofill:active{
       font-weight: 700;
       width: 200px;
       padding: 0;
+    }
+  }
+
+  .feedbackMsg {
+    width: 200px;
+    left: calc(50% - 100px);
+
+    span {
+      font-size: 14px;
     }
   }
 }

@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
-import { Component, inject } from '@angular/core';
+import { Component, inject, ElementRef, ViewChild } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 
 @Component({
@@ -11,6 +11,8 @@ import { FormsModule, NgForm } from '@angular/forms';
   styleUrl: './contact-form.component.scss',
 })
 export class ContactFormComponent {
+
+  @ViewChild('feedbackMsg') feedbackMsg: ElementRef;
 
   http = inject(HttpClient);
 
@@ -28,8 +30,6 @@ export class ContactFormComponent {
     privacyPolicy: false
   };
 
-  mailTest = true;
-
   post = {
     endPoint: 'https://marcel-luwinski.dev/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
@@ -42,7 +42,7 @@ export class ContactFormComponent {
   };
 
   onSubmit(ngForm: NgForm) {
-    if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
+    if (ngForm.submitted && ngForm.form.valid) {
       this.http
         .post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
@@ -54,10 +54,12 @@ export class ContactFormComponent {
           },
           complete: () => console.info('send post complete'),
         });
-    } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
-      ngForm.resetForm();
-    }
+        this.feedbackMsg.nativeElement.classList.add('active');
+        setTimeout(() => {
+          this.feedbackMsg.nativeElement.classList.remove('active');
+        }, 3000);
   }
+}
 
   toggleCheckbox() {
     this.contactData.privacyPolicy = !this.contactData.privacyPolicy;
