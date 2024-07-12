@@ -21,7 +21,7 @@
         spellcheck="false"
         required
         minlength="2"
-        maxlength="30"
+        maxlength="50"
         [(ngModel)]="contactData.name"
       />
       @if (!name.valid && name.touched) {
@@ -46,7 +46,7 @@
         (blur)="emailOnBlur()"
         spellcheck="false"
         required
-        maxlength="30"
+        maxlength="50"
         pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
         [(ngModel)]="contactData.email"
       />
