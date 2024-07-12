@@ -7,27 +7,34 @@
         skills in action.
       </p>
     </div>
-    <app-portfolio-project
-      [projectImg]="projects[0].image"
-      [projectName]="projects[0].name"
-      [projectTechStack]="projects[0].techStack"
-      [projectDescription]="projects[0].description"
-      [projectGithubUrl]="projects[0].githubUrl"
-      [projectLiveTestUrl]="projects[0].liveTestUrl"
+    <!-- <app-portfolio-project
+      [project]="projects[0]"
       [projectCount]="'01'"
       [projectTotal]="projects.length"
     ></app-portfolio-project>
 
     <app-portfolio-project-mirrored
-      [projectImg]="projects[1].image"
-      [projectName]="projects[1].name"
-      [projectTechStack]="projects[1].techStack"
-      [projectDescription]="projects[1].description"
-      [projectGithubUrl]="projects[1].githubUrl"
-      [projectLiveTestUrl]="projects[1].liveTestUrl"
+      [project]="projects[1]"
       [projectCount]="'02'"
       [projectTotal]="projects.length"
-    ></app-portfolio-project-mirrored>
+    ></app-portfolio-project-mirrored> -->
+
+    @for (project of projects; track project; let i = $index) {
+      @if (i % 2 === 0) {
+        <app-portfolio-project
+        [project]="projects[i]"
+        [projectCount]="'0' + (i + 1)"
+        [projectTotal]="projects.length"
+      ></app-portfolio-project>
+      }
+      @if (i % 2 !== 0) {
+        <app-portfolio-project-mirrored
+        [project]="projects[i]"
+        [projectCount]="'0' + (i + 1)"
+        [projectTotal]="projects.length"
+      ></app-portfolio-project-mirrored>
+      }
+    }
 
     <div class="arrowImgContainer">
       <div class="arrowImgBox">

@@ -79,9 +79,30 @@ h2 {
   color: #fffcf3;
   font-weight: 300;
   transition: 125ms;
+  position: relative;
+  overflow-x: hidden;
+  padding-bottom: 8px;
 
   &:hover {
-    color: #00bc8f;
+    font-weight: 700;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 100%;
+    width: 60%;
+    height: 2px;
+    background: #00bc8f;
+    transition: all 225ms ease-in-out;
+    opacity: 0;
+  }
+
+  &:hover::before {
+    right: 0;
+    transition: all 225ms ease-in-out;
+    opacity: 1;
   }
 }
 
@@ -136,7 +157,7 @@ h2 {
 
 @media(max-width: 500px) {
   section {
-    padding: 50px 16px;
+    padding: 80px 16px 50px 16px;
   }
 
   h2 {

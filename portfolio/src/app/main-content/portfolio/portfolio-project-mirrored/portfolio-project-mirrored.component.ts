@@ -17,12 +17,7 @@ export class PortfolioProjectMirroredComponent {
   @ViewChild('circleArrow') circleArrow: ElementRef;
   @ViewChild('projectInfoText') projectInfoText: ElementRef;
 
-  @Input() projectImg = '';
-  @Input() projectName = '';
-  @Input() projectTechStack = '';
-  @Input() projectDescription = '';
-  @Input() projectGithubUrl = '';
-  @Input() projectLiveTestUrl = '';
+  @Input() project: any;
   @Input() projectCount = '';
   @Input() projectTotal: number;
 
