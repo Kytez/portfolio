@@ -130,7 +130,7 @@ section {
 }
 
 .slideAnimation {
-  animation: slideInfoTextFromAbove 0.5s ease-in-out;
+  animation: slideInfoTextFromAbove 0.5s ease-in-out !important;
 }
 
 .responsiveTextSlideEffect {
@@ -140,7 +140,7 @@ section {
 }
 
 .responsiveCircleArrowEffect {
-  animation: circleArrow 225ms ease-in-out;
+  animation: circleArrow 225ms ease-in-out !important;
   display: flex !important;
 }
 
@@ -346,6 +346,7 @@ section {
     display: flex;
     transform: translateY(-120%) translateX(0);
     gap: 16px;
+    animation: none;
 
     h3 {
       font-size: 40px;

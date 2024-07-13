@@ -153,6 +153,14 @@ p {
   h2 {
     font-size: 50px;
   }
+
+  .btn {
+    pointer-events: none;
+  }
+
+  .btnSecondary {
+    pointer-events: none;
+  }
 }
 
 @media (max-width: 500px) {
