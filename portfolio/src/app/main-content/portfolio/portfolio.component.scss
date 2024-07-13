@@ -20,6 +20,8 @@ section {
     padding-right: 15%;
     display: flex;
     justify-content: flex-end;
+    z-index: -1;
+    position: relative;
   }
   
   .arrowImgBox {

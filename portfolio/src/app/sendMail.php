@@ -20,8 +20,8 @@ switch ($_SERVER['REQUEST_METHOD']) {
             $privacyPolicy = $params->privacyPolicy;
     
             $recipient = 'marcel.luwinski@gmail.com';  
-            $subject = "Contact From <$email>";
-            $message = "From:" . $name . "<br>" . $message ;
+            $subject = "Contact from <$email>";
+            $message = "From: " . $name . "<br><br>" . $message ;
     
             $headers   = array();
             $headers[] = 'MIME-Version: 1.0';

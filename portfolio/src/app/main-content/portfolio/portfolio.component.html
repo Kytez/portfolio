@@ -7,17 +7,6 @@
         skills in action.
       </p>
     </div>
-    <!-- <app-portfolio-project
-      [project]="projects[0]"
-      [projectCount]="'01'"
-      [projectTotal]="projects.length"
-    ></app-portfolio-project>
-
-    <app-portfolio-project-mirrored
-      [project]="projects[1]"
-      [projectCount]="'02'"
-      [projectTotal]="projects.length"
-    ></app-portfolio-project-mirrored> -->
 
     @for (project of projects; track project; let i = $index) {
       @if (i % 2 === 0) {
