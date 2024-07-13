@@ -28,13 +28,9 @@ switch ($_SERVER['REQUEST_METHOD']) {
             $headers[] = 'Content-type: text/html; charset=utf-8';
 
             // Additional headers
-            $headers[] = "From: noreply@mywebsite.com";
+            $headers[] = "From: noreply@webdevelopment-luwinski.com";
 
-            if (mail($recipient, $subject, $message, implode("\r\n", $headers))) {
-                echo('hat geklappt')
-            } else {
-                echo('hat nicht geklappt')
-            };
+            mail($recipient, $subject, $message, implode("\r\n", $headers));
             break;
         default: //Reject any non POST or OPTIONS requests.
             header("Allow: POST", true, 405);

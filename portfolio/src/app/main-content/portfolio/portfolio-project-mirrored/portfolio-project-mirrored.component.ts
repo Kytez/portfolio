@@ -40,7 +40,7 @@ export class PortfolioProjectMirroredComponent {
           this.imgFrame.nativeElement.classList.add('responsiveFrameEffect');
           this.circleArrow.nativeElement.classList.add('responsiveCircleArrowEffect');
           this.projectInfoText.nativeElement.classList.add('responsiveTextSlideEffect');
-        }, 100);
+        }, 200);
         if (this.observer) {
           this.observer.unobserve(entry.target);
         }
