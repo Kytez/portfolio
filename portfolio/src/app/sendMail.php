@@ -21,14 +21,14 @@ switch ($_SERVER['REQUEST_METHOD']) {
     
             $recipient = 'marcel.luwinski@gmail.com';  
             $subject = "Contact from <$email>";
-            $message = "From: " . $name . "<br><br>" . $message ;
+            $message = "From: " . $name . "<br>" . $email . "<br><br>" . $message ;
     
             $headers   = array();
             $headers[] = 'MIME-Version: 1.0';
             $headers[] = 'Content-type: text/html; charset=utf-8';
 
             // Additional headers
-            $headers[] = "From: noreply@webdevelopment-luwinski.com";
+            $headers[] = "From: Portfolio-Page@webdevelopment-luwinski.com";
 
             mail($recipient, $subject, $message, implode("\r\n", $headers));
             break;
