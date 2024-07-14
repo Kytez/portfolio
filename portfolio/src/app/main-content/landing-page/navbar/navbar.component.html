@@ -1,17 +1,26 @@
 <nav>
-  <a href="portfolio-page/#"
-    ><img src="../../../../assets/img/logo_schwarz_cutted.png" class="logo"
-  /></a>
-  <div>
-    <button
-      class="burger-button"
-      (click)="toggleMenu()"
-      [class.active]="menuOpen"
-    >
-      <div class="spinner diagonal1" [class.active]="menuOpen"></div>
-      <div class="spinner horizontal" [class.active]="menuOpen"></div>
-      <div class="spinner diagonal2" [class.active]="menuOpen"></div>
-    </button>
+  <div class="maxW1440">
+    <a href="portfolio-page/#"
+      ><img src="../../../../assets/img/logo_schwarz_cutted.png" class="logo"
+    /></a>
+
+    <div class="navRightSide">
+      <div class="langSwitch">
+        <span [class.active]="!languageEnglish" class="fontOverpass languageBtn">DE</span>
+        <span class="fontOverpass">|</span>
+        <span [class.active]="languageEnglish" class="fontOverpass languageBtn">EN</span>
+      </div>
+
+      <button
+        class="burger-button"
+        (click)="toggleMenu()"
+        [class.active]="menuOpen"
+      >
+        <div class="spinner diagonal1" [class.active]="menuOpen"></div>
+        <div class="spinner horizontal" [class.active]="menuOpen"></div>
+        <div class="spinner diagonal2" [class.active]="menuOpen"></div>
+      </button>
+    </div>
   </div>
 </nav>
 

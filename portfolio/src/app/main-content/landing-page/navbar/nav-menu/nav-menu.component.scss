@@ -269,6 +269,18 @@ h2 {
   }
 }
 
+@media (min-width: 2000px) {
+  footer {
+    padding: 200px 100px 64px 100px;
+  }
+}
+
+@media (min-width: 2500px) {
+  footer {
+    padding: 300px 100px 64px 100px;
+  }
+}
+
 @keyframes pulseGreen {
   0% {
     color: #fffcf3;
