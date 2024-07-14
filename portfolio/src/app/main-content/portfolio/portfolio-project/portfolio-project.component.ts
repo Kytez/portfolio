@@ -35,12 +35,12 @@ export class PortfolioProjectComponent {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         this.projectInfoText.nativeElement.classList.add('slideAnimation');
+        (entry.target as HTMLElement).classList.add('responsiveImgColorEffect');
+        this.imgFrame.nativeElement.classList.add('responsiveFrameEffect');
+        this.circleArrow.nativeElement.classList.add('responsiveCircleArrowEffect');
         setTimeout(() => {
-          (entry.target as HTMLElement).classList.add('responsiveImgColorEffect');
-          this.imgFrame.nativeElement.classList.add('responsiveFrameEffect');
-          this.circleArrow.nativeElement.classList.add('responsiveCircleArrowEffect');
           this.projectInfoText.nativeElement.classList.add('responsiveTextSlideEffect');
-        }, 200);
+        }, 400);
         if (this.observer) {
           this.observer.unobserve(entry.target);
         }

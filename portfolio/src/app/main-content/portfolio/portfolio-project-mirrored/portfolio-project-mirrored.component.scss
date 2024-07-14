@@ -132,7 +132,7 @@ section {
   }
   
   .slideAnimation {
-    animation: slideInfoTextFromAbove 0.5s ease-in-out !important;
+    animation: slideInfoTextFromAbove 400ms ease-in-out !important;
   }
   
   .responsiveTextSlideEffect {
@@ -349,6 +349,7 @@ section {
       transform: translateY(-120%) translateX(0);
       gap: 16px;
       align-items: flex-end;
+      transition: 350ms all;
   
       h3 {
         font-size: 40px;
