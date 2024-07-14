@@ -79,25 +79,48 @@ footer {
   justify-content: space-between;
 }
 
-.textContainer {
-  a {
-    color: #fffcf3;
-    font-size: 23px;
-    font-weight: 200;
+.linkMail {
+  color: #fffcf3;
+  font-size: 23px;
+  font-weight: 200;
+  position: relative;
+  transition: 225ms all;
 
-    &:hover {
-      color: #00bc8f;
-    }
+  &:hover {
+    font-weight: 400;
   }
 
-  h2 {
-    margin-block-end: 16px;
-    color: #fffcf3;
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 100%;
+    width: 60%;
+    height: 2px;
+    background: #00bc8f;
+    transition: all 225ms ease-in-out;
+    opacity: 0;
+  }
 
-    &:hover {
-      color: #00bc8f;
-      cursor: pointer;
-    }
+  &:hover::before {
+    right: 0;
+    transition: all 225ms ease-in-out;
+    opacity: 1;
+  }
+}
+
+.linkH2 {
+  width: fit-content;
+  color: #fffcf3;
+  display: flex;
+}
+
+h2 {
+  margin-block-end: 16px;
+
+  &:hover {
+    color: #00bc8f;
+    cursor: pointer;
   }
 }
 
