@@ -91,13 +91,13 @@ nav {
   transform: translateY(0);
 }
 
-@media(max-width: 992px) {
+@media (max-width: 992px) {
   nav {
     padding: 0 32px;
   }
 }
 
-@media(max-width: 500px) {
+@media (max-width: 500px) {
   .burger-button {
     width: 28px;
     height: 24px;
@@ -109,7 +109,7 @@ nav {
     right: 2px;
     top: 6px;
   }
-  
+
   .burger-button.active .diagonal2 {
     transform: rotate(-45deg);
     width: 50%;

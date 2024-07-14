@@ -10,7 +10,6 @@ import { NavMenuComponent } from './nav-menu/nav-menu.component';
   styleUrl: './navbar.component.scss',
 })
 export class NavbarComponent {
-
   animating = false;
   menuOpen = false;
 

@@ -98,8 +98,7 @@ h1 {
   }
 }
 
-@media(max-width: 1200px) {
-
+@media (max-width: 1200px) {
   h1 {
     font-size: 96px;
   }
@@ -118,8 +117,7 @@ h1 {
   }
 }
 
-@media(max-width: 992px) {
-
+@media (max-width: 992px) {
   section {
     padding: 0 32px;
   }
@@ -166,8 +164,7 @@ h1 {
   }
 }
 
-@media(max-width: 700px) {
-
+@media (max-width: 700px) {
   h1 {
     font-size: 52px;
   }
@@ -201,14 +198,14 @@ h1 {
     font-size: 16px;
     width: 180px;
     height: 60px;
-    
+
     &:hover {
       width: 200px;
     }
   }
 }
 
-@media(max-width: 500px) {
+@media (max-width: 500px) {
   section {
     padding: 0 16px;
   }
@@ -238,7 +235,7 @@ h1 {
     font-size: 15px;
     width: 160px;
     height: 50px;
-    
+
     &:hover {
       width: 180px;
     }
