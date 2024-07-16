@@ -1,10 +1,10 @@
 <section class="menuNav" [class.active]="isActive">
   <div class="navLinks fontSyne">
     <a (click)="triggerCloseNavMenu()" href="portfolio-page/#aboutMe"
-      >About me</a
+      >{{ 'navAbMe' | translate }}</a
     >
     <a (click)="triggerCloseNavMenu()" href="portfolio-page/#skills"
-      >My skills</a
+      >{{ 'navSkills' | translate }}</a
     >
     <a (click)="triggerCloseNavMenu()" href="portfolio-page/#portfolio"
       >Portfolio</a
@@ -17,7 +17,7 @@
           class="linkH2"
           (click)="triggerCloseNavMenu()"
           href="portfolio-page/#contact"
-          ><h2>Say Hi!</h2></a
+          ><h2>{{ 'footerGreeting' | translate }}</h2></a
         >
         <a class="fontOverpass linkMail" href="mailto:marcel.luwinski@gmail.com"
           >marcel.luwinski&#64;gmail.com</a

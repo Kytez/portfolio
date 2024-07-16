@@ -73,6 +73,7 @@ h1 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
   gap: 8px;
   overflow: hidden;
   min-width: 108px;
@@ -80,6 +81,7 @@ h1 {
   span {
     text-align: center;
     background-color: #fffcf3;
+    width: 80%;
   }
 
   img {

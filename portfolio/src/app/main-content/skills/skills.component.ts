@@ -1,9 +1,10 @@
 import { Component, AfterViewInit, ElementRef, ViewChild } from '@angular/core';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-skills',
   standalone: true,
-  imports: [],
+  imports: [TranslateModule],
   templateUrl: './skills.component.html',
   styleUrl: './skills.component.scss'
 })
@@ -12,6 +13,8 @@ export class SkillsComponent implements AfterViewInit {
   observer: IntersectionObserver | undefined;
   intervalId: any;
   @ViewChild('arrowImageSkills') arrowImageSkills: ElementRef;
+
+  constructor(private translateService: TranslateService) {};
 
   ngAfterViewInit(): void {
     if (this.arrowImageSkills.nativeElement) {

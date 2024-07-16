@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input, ElementRef, AfterViewInit, ViewChild } from '@angular/core';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-portfolio-project-mirrored',
@@ -20,6 +21,8 @@ export class PortfolioProjectMirroredComponent {
   @Input() project: any;
   @Input() projectCount = '';
   @Input() projectTotal: number;
+
+  constructor(public translateService: TranslateService) {};
 
   ngAfterViewInit(): void {
     if (this.imgContainer.nativeElement && window.innerWidth < 992) {

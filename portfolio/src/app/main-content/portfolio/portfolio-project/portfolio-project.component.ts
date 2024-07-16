@@ -1,10 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input, ElementRef, AfterViewInit, ViewChild } from '@angular/core';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-portfolio-project',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TranslateModule],
   templateUrl: './portfolio-project.component.html',
   styleUrl: './portfolio-project.component.scss'
 })
@@ -20,6 +21,8 @@ export class PortfolioProjectComponent {
   @Input() projectCount = '';
   @Input() projectTotal: number;
   @Input() project: any;
+
+  constructor(public translateService: TranslateService) {};
 
   ngAfterViewInit(): void {
     if (this.imgContainer.nativeElement && window.innerWidth < 992) {

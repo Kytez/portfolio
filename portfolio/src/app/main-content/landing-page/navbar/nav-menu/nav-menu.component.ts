@@ -6,11 +6,13 @@ import {
   OnChanges,
   SimpleChanges,
 } from '@angular/core';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
+
 
 @Component({
   selector: 'app-nav-menu',
   standalone: true,
-  imports: [],
+  imports: [TranslateModule],
   templateUrl: './nav-menu.component.html',
   styleUrl: './nav-menu.component.scss',
 })
@@ -19,6 +21,9 @@ export class NavMenuComponent implements OnChanges {
 
   @Input() activate: boolean = false;
   isActive: boolean = false;
+
+  constructor(private translateService: TranslateService) {
+  };
 
   triggerCloseNavMenu() {
     this.closeNavMenu.emit();

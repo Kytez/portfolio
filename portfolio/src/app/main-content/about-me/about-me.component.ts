@@ -1,9 +1,10 @@
 import { Component, AfterViewInit, ElementRef, ViewChild } from '@angular/core';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-about-me',
   standalone: true,
-  imports: [],
+  imports: [TranslateModule],
   templateUrl: './about-me.component.html',
   styleUrl: './about-me.component.scss',
 })
@@ -13,6 +14,8 @@ export class AboutMeComponent implements AfterViewInit {
 
   @ViewChild('arrowImg') arrowImg: ElementRef;
   @ViewChild('imgFrame') imgFrame: ElementRef;
+
+  constructor(private translateService: TranslateService) {};
 
   ngAfterViewInit(): void {
     if (this.imgFrame.nativeElement && window.innerWidth < 992) {
