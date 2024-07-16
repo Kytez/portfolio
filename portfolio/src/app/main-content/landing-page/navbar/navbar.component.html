@@ -6,9 +6,9 @@
 
     <div class="navRightSide">
       <div class="langSwitch">
-        <span [class.active]="!languageEnglish" class="fontOverpass languageBtn">DE</span>
+        <span (click)="setLanguage('de')" [class.active]="language === 'de'" class="fontOverpass languageBtn">DE</span>
         <span class="fontOverpass">|</span>
-        <span [class.active]="languageEnglish" class="fontOverpass languageBtn">EN</span>
+        <span (click)="setLanguage('en')" [class.active]="language === 'en'" class="fontOverpass languageBtn">EN</span>
       </div>
 
       <button

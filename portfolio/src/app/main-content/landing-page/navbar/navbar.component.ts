@@ -10,10 +10,15 @@ import { NavMenuComponent } from './nav-menu/nav-menu.component';
   styleUrl: './navbar.component.scss',
 })
 export class NavbarComponent {
-  languageEnglish = true; 
+
+  language = '';
 
   animating = false;
   menuOpen = false;
+
+  constructor() {
+    this.language = localStorage.getItem('language') || 'en';
+  }
 
   toggleMenuAndAnimateIcon() {
     if (this.animating) return;
@@ -27,5 +32,11 @@ export class NavbarComponent {
 
   closeMenu() {
     this.menuOpen = false;
+  }
+
+  setLanguage(language: string) {
+    this.language = language;
+
+    localStorage.setItem('language', this.language);
   }
 }
