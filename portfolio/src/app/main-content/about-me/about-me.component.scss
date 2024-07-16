@@ -26,6 +26,14 @@ h2 {
   justify-content: center;
 }
 
+.abMeBtn {
+  width: 260px;
+
+  &:hover {
+    width: 280px;
+  }
+}
+
 .imgContainer {
   position: relative;
   width: fit-content;
