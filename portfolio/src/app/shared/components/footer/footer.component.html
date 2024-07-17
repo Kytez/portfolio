@@ -1,6 +1,6 @@
 <section id="contact">
   <div class="maxW1440">
-    <h2>Say Hi!</h2>
+    <h2>{{ 'footerGreeting' | translate }}</h2>
   </div>
 
   <app-contact-form></app-contact-form>
@@ -35,9 +35,10 @@
           /></a>
         </div>
 
-        <a class="privacyLink fontOverpass" href="portfolio-page/privacy-policy"
-          >Privacy policy</a
-        >
+        <div class="legalLinks">
+          <a class="fontOverpass" href="portfolio-page/imprint">{{ 'imprint' | translate }}</a>
+          <a class="fontOverpass" href="portfolio-page/privacy-policy">{{ 'privPolicy' | translate }}</a>
+        </div>
       </div>
     </div>
   </div>

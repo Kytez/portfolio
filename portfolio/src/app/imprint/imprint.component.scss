@@ -1,0 +1,72 @@
+section {
+    display: flex;
+    justify-content: center;
+    padding: 100px;
+  }
+  
+  h1 {
+    font-size: 64px;
+    font-family: "Syne";
+    font-weight: 700;
+    color: #00bc8f;
+  }
+  
+  h2 {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    margin-top: 32px;
+    width: fit-content;
+  }
+  
+  p {
+    font-size: 16px;
+  }
+  
+  ul,
+  li {
+    font-family: "Overpass";
+  }
+  
+  @media (max-width: 992px) {
+    section {
+      padding: 100px 32px;
+    }
+  
+    h1 {
+      font-size: 48px;
+    }
+  
+    h2 {
+      font-size: 24px;
+    }
+  
+    p {
+      font-size: 15px;
+    }
+  
+    @media (max-width: 700px) {
+      h1 {
+        font-size: 36px;
+      }
+  
+      h2 {
+        font-size: 20px;
+      }
+  
+      p {
+        font-size: 14px;
+      }
+    }
+  
+    @media (max-width: 500px) {
+      section {
+        padding: 100px 16px;
+      }
+  
+      h1 {
+        font-size: 30px;
+        word-break: break-all;
+      }
+    }
+  }

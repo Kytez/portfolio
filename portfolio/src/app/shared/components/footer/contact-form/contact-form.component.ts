@@ -2,11 +2,13 @@ import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Component, inject, ElementRef, ViewChild } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { BehaviorSubject } from 'rxjs';
 
 @Component({
   selector: 'app-contact-form',
   standalone: true,
-  imports: [FormsModule, CommonModule],
+  imports: [FormsModule, CommonModule, TranslateModule],
   templateUrl: './contact-form.component.html',
   styleUrl: './contact-form.component.scss',
 })
@@ -16,11 +18,14 @@ export class ContactFormComponent {
 
   http = inject(HttpClient);
 
-  placeholderName = 'Your name';
+  placeholderNameEN = 'Your name';
+  placeholderNameDE = 'Dein Name';
   nameIsFocused = false;
-  placeholderEmail = 'Your email';
+  placeholderEmailEN = 'Your email';
+  placeholderEmailDE = 'Deine Email';
   emailIsFocused = false;
-  placeholderMessage = 'Your message';
+  placeholderMessageEN = 'Your message';
+  placeholderMessageDE = 'Deine Nachricht';
   messageIsFocused = false;
 
   contactData = {
@@ -40,6 +45,8 @@ export class ContactFormComponent {
       },
     },
   };
+
+  constructor(public translateService: TranslateService) {};
 
   onSubmit(ngForm: NgForm) {
     if (ngForm.submitted && ngForm.form.valid) {
@@ -90,5 +97,3 @@ export class ContactFormComponent {
   }
 
 }
-
-

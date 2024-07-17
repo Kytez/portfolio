@@ -1,13 +1,11 @@
 <section class="fontOverpass">
-  <span class="colorGreen fontS32W700">You think we could be a match?</span>
-  <span class="fontS23"
-    >Let's discuss your ideas and make it happen</span
-  >
+  <span class="colorGreen fontS32W700 txtCenter">{{ 'contactFormHL' | translate }}</span>
+  <span class="fontS23 txtCenter">{{ 'contactFormSubHL' | translate }}</span>
 
   <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
     <div class="inputContainer">
       @if (nameIsFocused) {
-        <label class="placeholder">{{ placeholderName }}</label>
+        <label class="placeholder">{{ 'placeholderName' | translate }}</label>
       }
       <input
         #name="ngModel"
@@ -15,7 +13,7 @@
         type="text"
         id="name"
         name="name"
-        [placeholder]="nameIsFocused ? '' : placeholderName"
+        [placeholder]="!nameIsFocused && this.translateService.currentLang === 'en' ? placeholderNameEN : !nameIsFocused && this.translateService.currentLang === 'de' ? placeholderNameDE : ''"
         (focus)="nameOnFocus()" 
         (blur)="nameOnBlur()"
         spellcheck="false"
@@ -25,15 +23,13 @@
         [(ngModel)]="contactData.name"
       />
       @if (!name.valid && name.touched) {
-      <span class="invalidMessage"
-        >Please enter your name with at least 2 characters</span
-      >
+      <span class="invalidMessage">{{ 'invalidName' | translate }}</span>
       }
     </div>
 
     <div class="inputContainer">
       @if (emailIsFocused) {
-        <label class="placeholder">{{ placeholderEmail }}</label>
+        <label class="placeholder">{{ 'placeholderEmail' | translate }}</label>
       }
       <input
         #email="ngModel"
@@ -41,7 +37,7 @@
         type="email"
         id="email"
         name="email"
-        [placeholder]="emailIsFocused ? '' : placeholderEmail"
+        [placeholder]="!emailIsFocused && this.translateService.currentLang === 'en' ? placeholderEmailEN : !emailIsFocused && this.translateService.currentLang === 'de' ? placeholderEmailDE : ''"
         (focus)="emailOnFocus()" 
         (blur)="emailOnBlur()"
         spellcheck="false"
@@ -51,20 +47,20 @@
         [(ngModel)]="contactData.email"
       />
       @if (!email.valid && email.touched) {
-      <span class="invalidMessage">Please enter a valid Email</span>
+      <span class="invalidMessage">{{ 'invalidEmail' | translate }}</span>
       }
     </div>
 
     <div class="inputContainer">
       @if (messageIsFocused) {
-        <label class="placeholder">{{ placeholderMessage }}</label>
+        <label class="placeholder">{{ 'placeholderMsg' | translate }}</label>
       }
       <textarea
         #message="ngModel"
         class="inputField"
         id="message"
         name="message"
-        [placeholder]="messageIsFocused ? '' : placeholderMessage"
+        [placeholder]="!messageIsFocused && this.translateService.currentLang === 'en' ? placeholderMessageEN : !messageIsFocused && this.translateService.currentLang === 'de' ? placeholderMessageDE : ''"
         (focus)="messageOnFocus()" 
         (blur)="messageOnBlur()"
         spellcheck="false"
@@ -75,9 +71,7 @@
         [(ngModel)]="contactData.message"
       ></textarea>
       @if (!message.valid && message.touched) {
-      <span class="invalidMessage"
-        >Please enter your message with at least 10 characters</span
-      >
+      <span class="invalidMessage">{{ 'invalidMsg' | translate }}</span>
       }
     </div>
 
@@ -95,13 +89,15 @@
           type="checkbox"
           hidden
         />
-        <span
-          >I've read the <a class="colorGreen" href="portfolio-page/privacy-policy">privacy policy</a> and
-          agree to the processing of my data as outlined.</span
-        >
+        @if (this.translateService.currentLang === 'en') {
+        <span>I've read the <a class="colorGreen" href="portfolio-page/privacy-policy">privacy policy</a> and
+          agree to the processing of my data as outlined.</span>
+        } @else {
+          <span>Ich habe die <a class="colorGreen" href="portfolio-page/privacy-policy">Datenschutzvereinbarung</a> gelesen und stimme der Verarbeitung wie angegeben zu.</span>
+        }
       </div>
       @if (!checkbox.valid && message.valid && name.valid && email.valid) {
-      <span class="invalidMessage">Please accept the privacy policy</span>
+      <span class="invalidMessage">{{ 'invalidCheckbox' | translate }}</span>
       }
     </div>
 
@@ -110,10 +106,10 @@
       class="btnForm"
       [ngClass]="{ disabled: contactForm.invalid, enabled: contactForm.valid }"
       type="submit"
-      value="Send message"
+      [value]="this.translateService.currentLang === 'en' ? 'Send message' : 'Abschicken'"
     />
   </form>
   <div #feedbackMsg class="feedbackMsg">
-    <span class="fontOverpass">Your message has been successfully transmitted</span>
+    <span class="fontOverpass">{{ 'feedbackMsg' | translate }}</span>
   </div>
 </section>
