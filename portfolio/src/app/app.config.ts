@@ -10,7 +10,7 @@ import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 export function HttpLoaderFactory(http: HttpClient) {
-  return new TranslateHttpLoader(http, '/portfolio-page/assets/i18n/', '.json');
+  return new TranslateHttpLoader(http);
 }
 
 export const appConfig: ApplicationConfig = {
