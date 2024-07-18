@@ -1,6 +1,61 @@
 <section>
   <div class="maxW1440">
     <app-navbar></app-navbar>
+    @if (this.translateService.currentLang === 'en') {
+    <div class="impressum">
+      <h1>Imprint</h1>
+      <br />
+      <p>Information according § 5 DDG</p>
+      <p>
+        Marcel Luwinski <br />
+        Mittelstraße 100a<br />
+        58285 Gevelsberg <br />
+      </p>
+      <p>
+        <br />
+        <strong>Represented by: </strong><br />
+        Marcel Luwinski<br />
+      </p>
+      <p>
+        <br />
+        <strong>contact:</strong> <br />
+        Phone: +491771597582<br />
+        E-Mail:
+        <a href="mailto:marcel.luwinski@gmail.com"
+          >marcel.luwinski&#64;gmail.com</a
+        ><br />
+      </p>
+      <p>
+        <br />
+        <strong>Disclaimer of liability: </strong><br /><br /><strong
+          >Liability for links</strong
+        ><br />
+        Our website contains links to external third-party websites over whose
+        content we have no influence. Therefore, we cannot accept any liability
+        for this third-party content. The respective provider or operator of the
+        pages is always responsible for the content of the linked pages. The
+        linked pages were checked for possible legal violations at the time of
+        linking. Illegal content was not recognizable at the time of linking.
+        However, permanent monitoring of the content of the linked pages is not
+        reasonable without concrete evidence of an infringement. If we become
+        aware of any legal infringements, we will remove such links
+        immediately.<br /><br /><strong>Data protection</strong><br />
+        The use of our website is generally possible without providing personal
+        data. Insofar as personal data (e.g. name, address or e-mail addresses)
+        is collected on our pages, this is always done on a voluntary basis as
+        far as possible. This data will not be passed on to third parties
+        without your express consent. We would like to point out that data
+        transmission over the Internet (e.g. when communicating by e-mail) may
+        be subject to security vulnerabilities. Complete protection of data
+        against access by third parties is not possible. We hereby expressly
+        prohibit the use of contact data published within the scope of the
+        imprint obligation by third parties for sending unsolicited advertising
+        and information material. The operators of this website expressly
+        reserve the right to take legal action in the event of the unsolicited
+        sending of advertising information, such as spam e-mails.<br />
+      </p>
+    </div>
+    } @else {
     <div class="impressum">
       <h1>Impressum</h1>
       <br />
@@ -59,12 +114,15 @@
         Werbeinformationen, etwa durch Spam-Mails, vor.<br />
       </p>
       <br />
-      <p>Website Impressum erstellt durch
-      <a href="https://www.impressum-generator.de">impressum-generator.de</a>
-      von der
-      <a href="https://www.kanzlei-hasselbach.de/" rel="nofollow"
-        >Kanzlei Hasselbach</a>
-    </p>
+      <p>
+        Website Impressum erstellt durch
+        <a href="https://www.impressum-generator.de">impressum-generator.de</a>
+        von der
+        <a href="https://www.kanzlei-hasselbach.de/" rel="nofollow"
+          >Kanzlei Hasselbach</a
+        >
+      </p>
     </div>
+    }
   </div>
 </section>
