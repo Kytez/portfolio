@@ -32,7 +32,7 @@ export class SkillsComponent implements AfterViewInit {
         (entry.target as HTMLElement).classList.add('animateArrow');
         setTimeout(() => {
           (entry.target as HTMLElement).classList.add('arrowFinalPosition');
-        }, 250);
+        }, 400);
         if (this.observer) {
           this.observer.unobserve(entry.target);
         }

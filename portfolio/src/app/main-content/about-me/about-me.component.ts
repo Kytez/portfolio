@@ -32,7 +32,7 @@ export class AboutMeComponent implements AfterViewInit {
       this.observer = new IntersectionObserver(
         this.handleIntersect.bind(this),
         {
-          rootMargin: '0px 0px -200px 0px',
+          rootMargin: '0px 0px -300px 0px',
           threshold: 1.0,
         }
       );
@@ -57,7 +57,7 @@ export class AboutMeComponent implements AfterViewInit {
         (entry.target as HTMLElement).classList.add('animateArrow');
         setTimeout(() => {
           (entry.target as HTMLElement).classList.add('arrowFinalPosition');
-        }, 250);
+        }, 400);
         if (this.observer) {
           this.observer.unobserve(entry.target);
         }

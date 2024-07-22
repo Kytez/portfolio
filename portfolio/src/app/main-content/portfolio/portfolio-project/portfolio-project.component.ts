@@ -43,7 +43,7 @@ export class PortfolioProjectComponent {
         this.circleArrow.nativeElement.classList.add('responsiveCircleArrowEffect');
         setTimeout(() => {
           this.projectInfoText.nativeElement.classList.add('responsiveTextSlideEffect');
-        }, 400);
+        }, 600);
         if (this.observer) {
           this.observer.unobserve(entry.target);
         }
