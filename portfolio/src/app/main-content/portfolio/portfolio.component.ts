@@ -42,6 +42,18 @@ export class PortfolioComponent {
       liveTestUrl:
         'https://polloloco.marcel-luwinski.dev',
     },
+    {
+      image: '../../../../assets/img/portfolio_screenshots/dabubble.png',
+      name: 'DABubble',
+      techStack: 'Angular, Firebase, Material Design',
+      descriptionEN:
+        'Chat-Messenger Application like Slack, to communicate in Teams.',
+      descriptionDE:
+        'Chat-Messenger Applikation im Stile von Slack zur Kommunikation im Team.',
+      githubUrl: 'https://github.com/Kytez/dabubble',
+      liveTestUrl:
+        'https://dabubble.marcel-luwinski.dev',
+    },
   ];
 
   observer: IntersectionObserver | undefined;
