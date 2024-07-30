@@ -28,7 +28,7 @@ export class PortfolioComponent {
         'Vom Kanban-System inspiriertes Aufgabenverwaltungssystem. Erstelle und organisiere Aufgaben, nutze Drag-And-Drop-Funktionen, füge Nutzer und Kategorien hinzu.',
       githubUrl: 'https://github.com/Kytez/join139',
       liveTestUrl:
-        'https://marcel-luwinski.developerakademie.net/join/index.html',
+        'https://join.marcel-luwinski.dev',
     },
     {
       image: '../../../../assets/img/portfolio_screenshots/pollo_loco.png',
@@ -40,7 +40,7 @@ export class PortfolioComponent {
         '2D-Spiel, basierend auf objektorientierter Entwicklung. Hilf Pepe Münzen zu finden und wirf die verrückten Hühner mit Salsa-Flaschen ab.',
       githubUrl: 'https://github.com/Kytez/elpolloloco',
       liveTestUrl:
-        'https://marcel-luwinski.developerakademie.net/pollo_loco/index.html',
+        'https://polloloco.marcel-luwinski.dev',
     },
   ];
 
