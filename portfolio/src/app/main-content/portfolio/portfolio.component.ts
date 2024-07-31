@@ -45,7 +45,7 @@ export class PortfolioComponent {
     {
       image: '../../../../assets/img/portfolio_screenshots/dabubble.png',
       name: 'DABubble',
-      techStack: 'Angular, Firebase, Material Design',
+      techStack: 'Angular | Firebase | Material Design',
       descriptionEN:
         'Chat-Messenger Application like Slack, to communicate in Teams.',
       descriptionDE:
