@@ -41,7 +41,7 @@ h2 {
         color: #00bc8f;
 
         img {
-            animation: animateIconSpin 250ms ease-in-out;
+            animation: animateIconSpin 500ms linear;
         }
     }
 
@@ -106,39 +106,9 @@ h2 {
   }
 
 @keyframes animateIconSpin {
-    0% {
-        transform: translateX(0) translateY(0);
-        scale: 1;
-    }
-    15% {
-        transform: translateX(-30px);
-    }
-    25% {
-        transform: translateX(-50px);
-        scale: 0.8;
-    }
-    40% {
-        transform: translateX(-20px);
-        scale: 0.6;
-    }
-    50% {
-        scale: 0.5;
-    }
-    60% {
-        transform: translateX(20px);
-        scale: 0.6;
-    }
-    75% {
-        transform: translateX(50px);
-        scale: 0.8;
-    }
-    85% {
-        transform: translateX(30px);
-    }
-    100% {
-        transform: translateX(0);
-        scale: 1;
-    }
+    0% {transform: rotate(0deg) scale(1);}
+    50% {transform: rotate(180deg) scale(0.6);}
+    100% {transform: rotate(360deg) scale(1);}
 }
 
 @media(max-width: 1470px) {

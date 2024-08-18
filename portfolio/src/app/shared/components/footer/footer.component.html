@@ -36,8 +36,8 @@
         </div>
 
         <div class="legalLinks">
-          <a class="fontOverpass" href="portfolio-page/imprint">{{ 'imprint' | translate }}</a>
-          <a class="fontOverpass" href="portfolio-page/privacy-policy">{{ 'privPolicy' | translate }}</a>
+          <a class="fontOverpass" [routerLink]="['imprint']" (click)="this.scrollToTop()">{{ 'imprint' | translate }}</a>
+          <a class="fontOverpass" [routerLink]="['privacy-policy']" (click)="this.scrollToTop()">{{ 'privPolicy' | translate }}</a>
         </div>
       </div>
     </div>
