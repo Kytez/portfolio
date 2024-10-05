@@ -19,16 +19,15 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 export class PortfolioComponent {
   projects = [
     {
-      image: '../../../../assets/img/portfolio_screenshots/join.png',
-      name: 'Join',
-      techStack: 'JavaScript | CSS | HTML | Firebase',
+      image: '../../../../assets/img/portfolio_screenshots/dabubble.png',
+      name: 'DABubble',
+      techStack: 'Angular | Firebase | Material Design',
       descriptionEN:
-        'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
+        'Chat-Messenger Application like Slack, to communicate in Teams.',
       descriptionDE:
-        'Vom Kanban-System inspiriertes Aufgabenverwaltungssystem. Erstelle und organisiere Aufgaben, nutze Drag-And-Drop-Funktionen, füge Nutzer und Kategorien hinzu.',
-      githubUrl: 'https://github.com/Kytez/join139',
-      liveTestUrl:
-        'https://join.marcel-luwinski.dev',
+        'Chat-Messenger Applikation im Stile von Slack zur Kommunikation im Team.',
+      githubUrl: 'https://github.com/Herteux94/DABubble',
+      liveTestUrl: 'https://dabubble.marcel-luwinski.dev',
     },
     {
       image: '../../../../assets/img/portfolio_screenshots/pollo_loco.png',
@@ -39,21 +38,32 @@ export class PortfolioComponent {
       descriptionDE:
         '2D-Spiel, basierend auf objektorientierter Entwicklung. Hilf Pepe Münzen zu finden und wirf die verrückten Hühner mit Salsa-Flaschen ab.',
       githubUrl: 'https://github.com/Kytez/elpolloloco',
-      liveTestUrl:
-        'https://polloloco.marcel-luwinski.dev',
+      liveTestUrl: 'https://polloloco.marcel-luwinski.dev',
     },
     {
-      image: '../../../../assets/img/portfolio_screenshots/dabubble.png',
-      name: 'DABubble',
-      techStack: 'Angular | Firebase | Material Design',
+      image:
+        '../../../../assets/img/portfolio_screenshots/screenshot-portfolio-page.png',
+      name: 'Portfolio-Page',
+      techStack: 'Angular | TypeScript | SCSS',
       descriptionEN:
-        'Chat-Messenger Application like Slack, to communicate in Teams.',
+        'Portfolio-Page, to introduce myself and my projects and to get in touch with me.',
       descriptionDE:
-        'Chat-Messenger Applikation im Stile von Slack zur Kommunikation im Team.',
-      githubUrl: 'https://github.com/Kytez/dabubble',
-      liveTestUrl:
-        'https://dabubble.marcel-luwinski.dev',
+        'Portfolio-Page, um mich und meine Projekte vorzustellen und Kontakt aufnehmen zu können.',
+      githubUrl: 'https://github.com/Kytez/portfolio',
+      liveTestUrl: 'https://marcel-luwinski.dev',
     },
+    // {
+    //   image: '../../../../assets/img/portfolio_screenshots/join.png',
+    //   name: 'Join',
+    //   techStack: 'JavaScript | CSS | HTML | Firebase',
+    //   descriptionEN:
+    //     'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
+    //   descriptionDE:
+    //     'Vom Kanban-System inspiriertes Aufgabenverwaltungssystem. Erstelle und organisiere Aufgaben, nutze Drag-And-Drop-Funktionen, füge Nutzer und Kategorien hinzu.',
+    //   githubUrl: 'https://github.com/Kytez/join139',
+    //   liveTestUrl:
+    //     'https://join.marcel-luwinski.dev',
+    // },
   ];
 
   observer: IntersectionObserver | undefined;
